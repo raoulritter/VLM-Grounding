@@ -19,7 +19,7 @@ def parse_arguments():
     parser.add_argument(
         "--model",
         type=str,
-        default="llava-hf/llava-1.5-7b-hf",
+        default="llava-hf/llava-v1.6-mistral-7b-hf",
         help="The path to the local model directory or Hugging Face repo.",
     )
     parser.add_argument(

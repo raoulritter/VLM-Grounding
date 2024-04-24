@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#SBATCH --partition=gpu
+#SBATCH --gpus=1
+#SBATCH --job-name=create_llava_ans
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=18
+#SBATCH --time=00:20:00
+#SBATCH --output=../POPE/job_outputs/create_llava_ans.out
+
+module purge
+module load 2022
+module load Anaconda3/2022.05
+
+source activate llava
+cd ../POPE
+srun python -u generate_llava_answers.py

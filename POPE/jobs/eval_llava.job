@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#SBATCH --partition=gpu
+#SBATCH --gpus=1
+#SBATCH --job-name=eval_llava
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=18
+#SBATCH --time=00:05:00
+#SBATCH --output=/home/jwiers/POPE/job_outputs/eval_llava.out
+
+module purge
+module load 2022
+module load Anaconda3/2022.05
+
+source activate llava
+
+srun python -u /home/jwiers/POPE/evaluate.py

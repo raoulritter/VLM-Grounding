@@ -1,0 +1,44 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 126249.95it/s]
+Traceback (most recent call last):
+  File "/home/jwiers/VLM-Grounding/MLX-Tests/LLAVA/generate_torch.py", line 128, in <module>
+    main()
+  File "/home/jwiers/VLM-Grounding/MLX-Tests/LLAVA/generate_torch.py", line 114, in main
+    processor, model = load_model(args.model)
+  File "/home/jwiers/VLM-Grounding/MLX-Tests/LLAVA/generate_torch.py", line 79, in load_model
+    model = LlavaModel.from_pretrained(model_path)
+  File "/gpfs/home4/jwiers/VLM-Grounding/MLX-Tests/LLAVA/llava_torch.py", line 101, in from_pretrained
+    model.load_state_dict(torch.load(next(glob.iglob(str(path / "*.bin")))))
+StopIteration
+srun: error: gcn25: task 0: Exited with exit code 1
+srun: Terminating StepId=6014271.0
+
+JOB STATISTICS
+==============
+Job ID: 6014271
+Cluster: snellius
+User/Group: jwiers/jwiers
+State: RUNNING
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 00:15:18 core-walltime
+Job Wall-clock time: 00:00:51
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 30.00 GB (30.00 GB/node)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

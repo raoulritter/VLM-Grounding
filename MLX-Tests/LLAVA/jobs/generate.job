@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#SBATCH --partition=gpu
+#SBATCH --gpus=1
+#SBATCH --job-name=generate
+#SBATCH --ntasks=1
+#SBATCH --mem=30G
+#SBATCH --cpus-per-task=18
+#SBATCH --time=00:05:00
+#SBATCH --output=/home/jwiers/VLM-Grounding/MLX-Tests/LLAVA/job_outputs/generate.out
+
+module purge
+module load 2022
+module load Anaconda3/2022.05
+source activate LLAVA
+
+srun python -u /home/jwiers/VLM-Grounding/MLX-Tests/LLAVA/generate_torch.py \
+  --model llava-hf/llava-1.5-7b-hf \
+  --image "http://images.cocodataset.org/val2017/000000039769.jpg" \
+  --prompt "USER: <image>\nWhat are these?\nASSISTANT:" \
+  --max-tokens 128 \
+  --temp 0

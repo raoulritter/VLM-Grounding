@@ -1,0 +1,30 @@
+{"question_id": 1, "image": "COCO_val2014_000000310196.jpg", "text": "Can you provide a description of the image?", "label": "snowboard"}
+{"question_id": 3, "image": "COCO_val2014_000000310196.jpg", "text": "Can you provide a description of the image?", "label": "person"}
+{"question_id": 5, "image": "COCO_val2014_000000310196.jpg", "text": "Can you provide a description of the image?", "label": "skis"}
+{"question_id": 7, "image": "COCO_val2014_000000210789.jpg", "text": "Can you provide a description of the image?", "label": "truck"}
+{"question_id": 9, "image": "COCO_val2014_000000210789.jpg", "text": "Can you provide a description of the image?", "label": "person"}
+{"question_id": 11, "image": "COCO_val2014_000000210789.jpg", "text": "Can you provide a description of the image?", "label": "umbrella"}
+{"question_id": 13, "image": "COCO_val2014_000000429109.jpg", "text": "Can you provide a description of the image?", "label": "person"}
+{"question_id": 15, "image": "COCO_val2014_000000429109.jpg", "text": "Can you provide a description of the image?", "label": "bicycle"}
+{"question_id": 17, "image": "COCO_val2014_000000429109.jpg", "text": "Can you provide a description of the image?", "label": "car"}
+{"question_id": 19, "image": "COCO_val2014_000000211674.jpg", "text": "Can you provide a description of the image?", "label": "person"}
+{"question_id": 21, "image": "COCO_val2014_000000211674.jpg", "text": "Can you provide a description of the image?", "label": "potted plant"}
+{"question_id": 23, "image": "COCO_val2014_000000211674.jpg", "text": "Can you provide a description of the image?", "label": "car"}
+{"question_id": 25, "image": "COCO_val2014_000000458338.jpg", "text": "Can you provide a description of the image?", "label": "traffic light"}
+{"question_id": 27, "image": "COCO_val2014_000000458338.jpg", "text": "Can you provide a description of the image?", "label": "person"}
+{"question_id": 29, "image": "COCO_val2014_000000458338.jpg", "text": "Can you provide a description of the image?", "label": "car"}
+{"question_id": 31, "image": "COCO_val2014_000000283412.jpg", "text": "Can you provide a description of the image?", "label": "dog"}
+{"question_id": 33, "image": "COCO_val2014_000000283412.jpg", "text": "Can you provide a description of the image?", "label": "dining table"}
+{"question_id": 35, "image": "COCO_val2014_000000283412.jpg", "text": "Can you provide a description of the image?", "label": "bed"}
+{"question_id": 37, "image": "COCO_val2014_000000265719.jpg", "text": "Can you provide a description of the image?", "label": "person"}
+{"question_id": 39, "image": "COCO_val2014_000000265719.jpg", "text": "Can you provide a description of the image?", "label": "spoon"}
+{"question_id": 41, "image": "COCO_val2014_000000265719.jpg", "text": "Can you provide a description of the image?", "label": "fork"}
+{"question_id": 43, "image": "COCO_val2014_000000461331.jpg", "text": "Can you provide a description of the image?", "label": "tv"}
+{"question_id": 45, "image": "COCO_val2014_000000461331.jpg", "text": "Can you provide a description of the image?", "label": "toaster"}
+{"question_id": 47, "image": "COCO_val2014_000000461331.jpg", "text": "Can you provide a description of the image?", "label": "microwave"}
+{"question_id": 49, "image": "COCO_val2014_000000544456.jpg", "text": "Can you provide a description of the image?", "label": "backpack"}
+{"question_id": 51, "image": "COCO_val2014_000000544456.jpg", "text": "Can you provide a description of the image?", "label": "person"}
+{"question_id": 53, "image": "COCO_val2014_000000544456.jpg", "text": "Can you provide a description of the image?", "label": "skis"}
+{"question_id": 55, "image": "COCO_val2014_000000017708.jpg", "text": "Can you provide a description of the image?", "label": "bird"}
+{"question_id": 57, "image": "COCO_val2014_000000017708.jpg", "text": "Can you provide a description of the image?", "label": "person"}
+{"question_id": 59, "image": "COCO_val2014_000000017708.jpg", "text": "Can you provide a description of the image?", "label": "boat"}

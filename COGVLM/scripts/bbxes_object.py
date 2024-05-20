@@ -1,13 +1,6 @@
 import json
 import re
 
-# def extract_bboxes(caption):
-#     """ Extract bounding boxes from caption and convert to COCO format. """
-#     bbox_pattern = r'\[\[(\d+),(\d+),(\d+),(\d+)\]\]'
-#     matches = re.findall(bbox_pattern, caption)
-#     bboxes = [[int(x), int(y), int(x2) - int(x), int(y2) - int(y)] for x, y, x2, y2 in matches]
-#     return bboxes
-
 def extract_bboxes(caption):
     """ Extract bounding boxes from caption and convert to COCO format, handling multiple bounding boxes separated by semicolons. """
     bbox_pattern = r'\[\[([\d,;]+)\]\]'
@@ -19,7 +12,7 @@ def extract_bboxes(caption):
         for bbox in individual_bboxes:
             coords = list(map(int, bbox.split(',')))
             # Convert to COCO format: [x, y, width, height]
-            bboxes.append([coords[0], coords[1], coords[2] - coords[0], coords[3] - coords[1]])
+            bboxes.append([coords[0], coords[1], coords[2] - coords[0], coords[3] - coords[1], f"{coords[0]},{coords[1]},{coords[2]},{coords[3]}"])
     return bboxes
 
 def load_json(filename):
@@ -29,7 +22,12 @@ def load_json(filename):
         for line in file:
             data.append(json.loads(line))
     return data
-    
+
+def get_word_preceding_bbox(caption, bbox_text):
+    """ Get the word preceding the bounding box text in the caption. """
+    pattern = rf'(\w+)\s+\[\[{bbox_text}\]\]'
+    match = re.search(pattern, caption)
+    return match.group(1) if match else "unknown"
 
 def process_entries(captions_file, objects_file):
     captions_data = load_json(captions_file)
@@ -55,16 +53,17 @@ def process_entries(captions_file, objects_file):
         # Handle mismatch in number of objects and bounding boxes
         min_length = min(len(bboxes), len(objects))
         for i in range(min_length):
-            combined_data["bbx with object"].append(f"{objects[i]} {bboxes[i]}")
+            combined_data["bbx with object"].append(f"{objects[i]} {bboxes[i][:4]}")
 
         # Handle cases where there are more bounding boxes than objects
         for i in range(min_length, len(bboxes)):
-            combined_data["bbx with object"].append(f"unknown {bboxes[i]}")
+            bbox_text = bboxes[i][4]
+            preceding_word = get_word_preceding_bbox(caption, bbox_text)
+            combined_data["bbx with object"].append(f"{preceding_word} {bboxes[i][:4]}")
 
         processed_data.append(combined_data)
 
-    return processed_data    
-
+    return processed_data
 
 def save_processed_data(processed_data, output_file):
     with open(output_file, 'w') as file:

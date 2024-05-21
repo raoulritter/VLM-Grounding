@@ -1,115 +1,96 @@
+# Modified script to handle maximum IoU values and classify correctly, misclassified, and hallucinations
+
 import json
-import torch
-from torchvision.ops import box_iou
+from typing import List, Dict
 
-# Define file paths
-predicted_bboxes_path = 'VLM-Grounding/COGVLM/data/bbxes_objects/adjusted_bbox_objects.json'
-gt_bboxes_path = 'VLM-Grounding/COGVLM/data/gt_bboxes/gt_bboxes.json'
+# Function to calculate IoU
+def calculate_iou(box1, box2):
+    x1, y1, w1, h1 = box1
+    x2, y2, w2, h2 = box2
+    
+    # Calculate the (x, y)-coordinates of the intersection rectangle
+    xA = max(x1, x2)
+    yA = max(y1, y2)
+    xB = min(x1 + w1, x2 + w2)
+    yB = min(y1 + h1, y2 + h2)
 
-# Load the JSON data for predicted bounding boxes
-with open(predicted_bboxes_path, 'r') as file:
-    predicted_data = json.load(file)
+    # Compute the area of intersection rectangle
+    interArea = max(0, xB - xA) * max(0, yB - yA)
 
-# Load the JSON data for ground truth bounding boxes
-with open(gt_bboxes_path, 'r') as file:
-    gt_data = json.load(file)
+    # Compute the area of both the prediction and ground-truth rectangles
+    box1Area = w1 * h1
+    box2Area = w2 * h2
 
-# Extract and adjust the predicted bounding boxes
-predicted_bboxes = []
-gt_bboxes = []
+    # Compute the intersection over union by taking the intersection
+    # area and dividing it by the sum of prediction + ground-truth
+    # areas - the intersection area
+    iou = interArea / float(box1Area + box2Area - interArea)
 
-for item in predicted_data:
-    # image_id = str(int(item['image'].split('.')[0]))  # Convert to int and back to str to remove leading zeros
-    bboxes = []
-    labels = []
-    if "bbx with object" in item:
-        for bbx in item["bbx with object"]:
-            if bbx != []:
-                # Extract the bounding box coordinates and label
-                label = bbx.split(' [')[0]  # Split and take the first part as label
-                coords = bbx[bbx.index('[') + 1:bbx.index(']')].split(', ')
-                # Convert string coordinates to floats
-                coords = list(map(float, coords))
-                # Append the bounding box to the list
-                bboxes.append(coords)
-                labels.append(label)
-    predicted_bboxes.append({"image": item['image'], "bboxes": bboxes, "labels": labels})
+    return iou
 
-for item in gt_data:
-    # image_id = str(int(item['image'].split('.')[0]))  # Convert to int and back to str to remove leading zeros
-    bboxes = []
-    labels = []
-    if "bbx with object" in item:
-        for bbx in item["bbx with object"]:
-            if bbx != []:
-                # Extract the bounding box coordinates and label
-                label = bbx.split(' [')[0]  # Split and take the first part as label
-                coords = bbx[bbx.index('[') + 1:bbx.index(']')].split(', ')
-                # Convert string coordinates to floats
-                coords = list(map(float, coords))
-                # Append the bounding box to the list
-                bboxes.append(coords)
-                labels.append(label)
-    gt_bboxes.append({"image": item['image'], "bboxes": bboxes, "labels": labels})
+# Function to parse bounding box from string
+def parse_bounding_box(bbox_str):
+    bbox_str = bbox_str.split('[')[-1].split(']')[0]  # Get the part inside the square brackets
+    bbox = list(map(float, bbox_str.split(',')))
+    return bbox
 
-# print(len(predicted_bboxes))
-# Ground truth bounding boxes are already in a usable format
-# gt_bboxes = gt_data
+# Load JSON files
+with open('../data/bbxes_objects/adjusted_bbox_objects.json', 'r') as f:
+    predicted_data = json.load(f)
 
-# This script processes pairs of predicted and ground truth bounding boxes for object detection. 
-# It calculates the Intersection over Union (IoU) for each predicted box against all ground truth boxes in the same image, 
-# identifies the ground truth box with the highest IoU for each prediction, and classifies the prediction based on the IoU value. 
-# Predictions with an IoU below 0.5 are considered hallucinations, while those with higher IoU are noted for further evaluation. 
+with open('../data/gt_bboxes/gt_bboxes.json', 'r') as f:
+    ground_truth_data = json.load(f)
+
 hallucinations = []
 correctly_classified = []
 misclassified = []
+instances = 0
 
-# print(len(gt_bboxes))
-for pred_bbx in predicted_bboxes:
-    for gt_bbx in gt_bboxes:
-        # Check if the current predicted and ground truth boxes are from the same image
-        if pred_bbx['image'] == gt_bbx['image']:
-            pred_boxes = torch.tensor(pred_bbx['bboxes'], dtype=torch.float32)
-            gt_boxes = torch.tensor(gt_bbx['bboxes'], dtype=torch.float32)
+# Process each image and calculate IoU
+for pred in predicted_data:
+    image_id = pred['image']
+    pred_boxes = pred['bbx with object']
+    instances += len(pred_boxes)
 
-            # some tensors were empty
-            if pred_boxes.nelement() == 0 or gt_boxes.nelement() == 0:
-                #print("One of the tensors is empty.")
-                continue
+    # Find the corresponding ground truth boxes
+    gt = next((item for item in ground_truth_data if item['image'] == image_id), None)
+    if gt is not None:
+        gt_boxes = gt['bbx with object']
+        for pred_box in pred_boxes:
+            pred_box_parsed = parse_bounding_box(pred_box)
+            max_iou = 0
+            matched_gt_idx = -1
+            for idx, gt_box in enumerate(gt_boxes):
+                gt_box_parsed = parse_bounding_box(gt_box)
+                iou = calculate_iou(pred_box_parsed, gt_box_parsed)
+                if iou > max_iou:
+                    max_iou = iou
+                    matched_gt_idx = idx
+            
+            pred_label = pred_box.split('[')[0].strip()
+            matched_gt_label = gt_boxes[matched_gt_idx].split('[')[0].strip() if matched_gt_idx >= 0 else None
 
-            current_iou = box_iou(pred_boxes, gt_boxes)
-            # Find the maximum IoU value for each predicted box and the index of the corresponding ground truth box
-            max_iou_values, max_indices = current_iou.max(dim=1)
-
-            # Iterate over each predicted box to classify based on the IoU value
-            for idx, max_iou in enumerate(max_iou_values):
-                # Get the index of the ground truth box that has the highest IoU with the current predicted box
-                matched_gt_idx = max_indices[idx]
-                # Retrieve the labels of the matched ground truth box and the current predicted box
-                matched_gt_label = gt_bbx['labels'][matched_gt_idx]
-                pred_label = pred_bbx['labels'][idx]
-
-                if max_iou < 0.5:
-                    # If IoU is less than 0.5, classify as a hallucination
-                    hallucinations.append({"image_id": pred_bbx['image'], "pred_box": pred_bbx['bboxes'][idx], "iou": max_iou.item()})
+            if max_iou < 0.5:
+                # If IoU is less than 0.5, classify as a hallucination
+                hallucinations.append({"image_id": image_id, "pred_box": pred_box, "iou": max_iou})
+            else:
+                # Check if the labels match
+                if matched_gt_label == pred_label:
+                    correctly_classified.append({"image_id": image_id, "pred_box": pred_box, "iou": max_iou, "label": pred_label})
                 else:
-                    # Check if the labels match
-                    if matched_gt_label == pred_label:
-                        correctly_classified.append({"image_id": pred_bbx['image'], "pred_box": pred_bbx['bboxes'][idx], "iou": max_iou.item(), "label": pred_label})
-                    else:
-                        misclassified.append({"image_id": pred_bbx['image'], "pred_box": pred_bbx['bboxes'][idx], "iou": max_iou.item(), "pred_label": pred_label, "gt_label": matched_gt_label})
+                    misclassified.append({"image_id": image_id, "pred_box": pred_box, "iou": max_iou, "pred_label": pred_label, "gt_label": matched_gt_label})
 
-print(f"Hallucinations: {len(hallucinations)}")
-print(f"Correctly classified: {len(correctly_classified)}")
-print(f"Misclassified: {len(misclassified)}")
+print(f"Total instances: {instances}")
+print(f"Number of hallucinations: {len(hallucinations)}")
+print(f"Number of correct classifications: {len(correctly_classified)}")
+print(f"Number of misclassifications: {len(misclassified)}")
 
+# Save the results to JSON files
+with open('../data/output/hallucinations.json', 'w') as f:
+    json.dump(hallucinations, f, indent=4)
 
-with open('VLM-Grounding/COGVLM/data/output/correctly_classified.json', 'w') as file:
-    json.dump(correctly_classified, file, indent=4)
+with open('../data/output/correctly_classified.json', 'w') as f:
+    json.dump(correctly_classified, f, indent=4)
 
-with open('VLM-Grounding/COGVLM/data/output/misclassified.json', 'w') as file:
-    json.dump(misclassified, file, indent=4)
-
-with open('VLM-Grounding/COGVLM/data/output/hallucinations.json', 'w') as file:
-    json.dump(hallucinations, file, indent=4)
-
+with open('../data/output/misclassified.json', 'w') as f:
+    json.dump(misclassified, f, indent=4)

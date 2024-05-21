@@ -3,8 +3,8 @@ import torch
 from torchvision.ops import box_iou
 
 # Define file paths
-predicted_bboxes_path = '../data/bbxes_objects/adjusted_bbox_objects.json'
-gt_bboxes_path = '../data/gt_bboxes/gt_bboxes.json'
+predicted_bboxes_path = 'VLM-Grounding/COGVLM/data/bbxes_objects/adjusted_bbox_objects.json'
+gt_bboxes_path = 'VLM-Grounding/COGVLM/data/gt_bboxes/gt_bboxes.json'
 
 # Load the JSON data for predicted bounding boxes
 with open(predicted_bboxes_path, 'r') as file:
@@ -61,20 +61,20 @@ for item in gt_data:
 # identifies the ground truth box with the highest IoU for each prediction, and classifies the prediction based on the IoU value. 
 # Predictions with an IoU below 0.5 are considered hallucinations, while those with higher IoU are noted for further evaluation. 
 hallucinations = []
-classification = []
+correctly_classified = []
+misclassified = []
 
 # print(len(gt_bboxes))
 for pred_bbx in predicted_bboxes:
     for gt_bbx in gt_bboxes:
         # Check if the current predicted and ground truth boxes are from the same image
         if pred_bbx['image'] == gt_bbx['image']:
-            # print(pred_bbx['image_id'])
             pred_boxes = torch.tensor(pred_bbx['bboxes'], dtype=torch.float32)
             gt_boxes = torch.tensor(gt_bbx['bboxes'], dtype=torch.float32)
 
             # some tensors were empty
             if pred_boxes.nelement() == 0 or gt_boxes.nelement() == 0:
-                print("One of the tensors is empty.")
+                #print("One of the tensors is empty.")
                 continue
 
             current_iou = box_iou(pred_boxes, gt_boxes)
@@ -85,24 +85,31 @@ for pred_bbx in predicted_bboxes:
             for idx, max_iou in enumerate(max_iou_values):
                 # Get the index of the ground truth box that has the highest IoU with the current predicted box
                 matched_gt_idx = max_indices[idx]
-                # Retrieve the coordinates of the matched ground truth box
-                matched_gt_box = gt_bbx['bboxes'][matched_gt_idx]
-                # Retrieve the coordinates of the current predicted box
-                pred_box = pred_bbx['bboxes'][idx]
+                # Retrieve the labels of the matched ground truth box and the current predicted box
+                matched_gt_label = gt_bbx['labels'][matched_gt_idx]
+                pred_label = pred_bbx['labels'][idx]
 
                 if max_iou < 0.5:
                     # If IoU is less than 0.5, classify as a hallucination
-                    hallucinations.append({"image_id": pred_bbx['image'], "pred_box": pred_box, "iou": max_iou.item()})
-                else:                
-                    classification.append({"image_id": pred_bbx['image'], "pred_box": pred_box, "iou": max_iou.item()})
+                    hallucinations.append({"image_id": pred_bbx['image'], "pred_box": pred_bbx['bboxes'][idx], "iou": max_iou.item()})
+                else:
+                    # Check if the labels match
+                    if matched_gt_label == pred_label:
+                        correctly_classified.append({"image_id": pred_bbx['image'], "pred_box": pred_bbx['bboxes'][idx], "iou": max_iou.item(), "label": pred_label})
+                    else:
+                        misclassified.append({"image_id": pred_bbx['image'], "pred_box": pred_bbx['bboxes'][idx], "iou": max_iou.item(), "pred_label": pred_label, "gt_label": matched_gt_label})
 
-# print(f"Hallucinations: {len(hallucinations)}")
-# print(f"Classification: {len(classification)}")
-# print(classification)
+print(f"Hallucinations: {len(hallucinations)}")
+print(f"Correctly classified: {len(correctly_classified)}")
+print(f"Misclassified: {len(misclassified)}")
 
 
-with open('../data/output/classification.json', 'w') as file:
-    json.dump(classification, file, indent=4)
+with open('VLM-Grounding/COGVLM/data/output/correctly_classified.json', 'w') as file:
+    json.dump(correctly_classified, file, indent=4)
 
-with open('../data/output/hallucinations.json', 'w') as file:
+with open('VLM-Grounding/COGVLM/data/output/misclassified.json', 'w') as file:
+    json.dump(misclassified, file, indent=4)
+
+with open('VLM-Grounding/COGVLM/data/output/hallucinations.json', 'w') as file:
     json.dump(hallucinations, file, indent=4)
+

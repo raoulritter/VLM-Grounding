@@ -1,0 +1,278 @@
+[
+    {
+        "image_id": "000000031296.jpg",
+        "pred_box": [
+            62.72,
+            111.35000000000001,
+            170.24,
+            285.175
+        ],
+        "iou": 0.8669857382774353,
+        "pred_label": "dining table",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000515025.jpg",
+        "pred_box": [
+            221.44,
+            192.15,
+            304.64,
+            211.792
+        ],
+        "iou": 0.7805533409118652,
+        "pred_label": "pizza",
+        "gt_label": "cat"
+    },
+    {
+        "image_id": "000000368212.jpg",
+        "pred_box": [
+            8.604,
+            44.160000000000004,
+            380.966,
+            558.08
+        ],
+        "iou": 0.9285558462142944,
+        "pred_label": "toilet",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000368212.jpg",
+        "pred_box": [
+            63.096000000000004,
+            166.4,
+            388.614,
+            465.91999999999996
+        ],
+        "iou": 0.948126494884491,
+        "pred_label": "toothbrush",
+        "gt_label": "toilet"
+    },
+    {
+        "image_id": "000000150638.jpg",
+        "pred_box": [
+            0.0,
+            143.045,
+            638.72,
+            324.548
+        ],
+        "iou": 0.5348662734031677,
+        "pred_label": "cup",
+        "gt_label": "dining table"
+    },
+    {
+        "image_id": "000000322844.jpg",
+        "pred_box": [
+            104.64,
+            101.76,
+            254.88000000000002,
+            376.32
+        ],
+        "iou": 0.881259024143219,
+        "pred_label": "bear",
+        "gt_label": "teddy bear"
+    },
+    {
+        "image_id": "000000196759.jpg",
+        "pred_box": [
+            37.120000000000005,
+            158.4,
+            573.44,
+            266.88
+        ],
+        "iou": 0.799034595489502,
+        "pred_label": "car",
+        "gt_label": "truck"
+    },
+    {
+        "image_id": "000000523807.jpg",
+        "pred_box": [
+            88.0,
+            136.875,
+            317.0,
+            178.875
+        ],
+        "iou": 0.906376302242279,
+        "pred_label": "person",
+        "gt_label": "hot dog"
+    },
+    {
+        "image_id": "000000249025.jpg",
+        "pred_box": [
+            105.986,
+            196.0,
+            192.272,
+            254.0
+        ],
+        "iou": 0.8399406671524048,
+        "pred_label": "dining table",
+        "gt_label": "vase"
+    },
+    {
+        "image_id": "000000256916.jpg",
+        "pred_box": [
+            70.4,
+            205.92,
+            368.0,
+            256.8
+        ],
+        "iou": 0.805014431476593,
+        "pred_label": "dining table",
+        "gt_label": "pizza"
+    },
+    {
+        "image_id": "000000322211.jpg",
+        "pred_box": [
+            111.35999999999999,
+            0.0,
+            527.36,
+            473.28
+        ],
+        "iou": 0.902254045009613,
+        "pred_label": "donut",
+        "gt_label": "dining table"
+    },
+    {
+        "image_id": "000000430961.jpg",
+        "pred_box": [
+            63.00000000000001,
+            32.857,
+            294.75,
+            272.426
+        ],
+        "iou": 0.5872737169265747,
+        "pred_label": "sports ball",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000100238.jpg",
+        "pred_box": [
+            6.4,
+            24.959999999999997,
+            203.52,
+            453.59999999999997
+        ],
+        "iou": 0.8814609050750732,
+        "pred_label": "frisbee",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000404922.jpg",
+        "pred_box": [
+            40.112,
+            186.0,
+            103.04,
+            271.0
+        ],
+        "iou": 0.8269652724266052,
+        "pred_label": "tennis racket",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000455448.jpg",
+        "pred_box": [
+            0.9560000000000001,
+            166.4,
+            358.5,
+            465.91999999999996
+        ],
+        "iou": 0.9358989000320435,
+        "pred_label": "cake",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000107087.jpg",
+        "pred_box": [
+            126.72,
+            64.05,
+            358.40000000000003,
+            330.498
+        ],
+        "iou": 0.5441208481788635,
+        "pred_label": "person",
+        "gt_label": "chair"
+    },
+    {
+        "image_id": "000000073533.jpg",
+        "pred_box": [
+            304.64,
+            32.160000000000004,
+            334.08000000000004,
+            446.40000000000003
+        ],
+        "iou": 0.8827376961708069,
+        "pred_label": "cell phone",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000254368.jpg",
+        "pred_box": [
+            32.144,
+            57.599999999999994,
+            358.68,
+            517.12
+        ],
+        "iou": 0.764202892780304,
+        "pred_label": "person",
+        "gt_label": "bed"
+    },
+    {
+        "image_id": "000000521540.jpg",
+        "pred_box": [
+            1.28,
+            0.96,
+            637.44,
+            477.6
+        ],
+        "iou": 0.9885611534118652,
+        "pred_label": "spoon",
+        "gt_label": "dining table"
+    },
+    {
+        "image_id": "000000318114.jpg",
+        "pred_box": [
+            120.505,
+            100.71600000000001,
+            259.105,
+            189.728
+        ],
+        "iou": 0.9118818640708923,
+        "pred_label": "fork",
+        "gt_label": "bowl"
+    },
+    {
+        "image_id": "000000087476.jpg",
+        "pred_box": [
+            119.13300000000001,
+            256.0,
+            210.938,
+            373.76
+        ],
+        "iou": 0.6777849793434143,
+        "pred_label": "skateboard",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000191845.jpg",
+        "pred_box": [
+            0.0,
+            0.0,
+            638.72,
+            359.917
+        ],
+        "iou": 0.9993312358856201,
+        "pred_label": "umbrella",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000335658.jpg",
+        "pred_box": [
+            0.0,
+            100.8,
+            326.4,
+            175.68
+        ],
+        "iou": 0.8702611327171326,
+        "pred_label": "mouse",
+        "gt_label": "keyboard"
+    }
+]

@@ -110,6 +110,16 @@ def map_object_to_category(obj):
 def load_json(file_path):
     with open(file_path, 'r') as file:
         return json.load(file)
+    
+def convert_to_coco_format(x1, y1, x2, y2):
+    """
+    Convert bounding box coordinates from [x1, y1, x2, y2] to [x, y, width, height].
+    """
+    x = x1
+    y = y1
+    width = x2 - x1
+    height = y2 - y1
+    return [x, y, width, height]    
 
 def extract_objects_and_bboxes(captions_file):
     """
@@ -158,7 +168,9 @@ def extract_objects_and_bboxes(captions_file):
                 # Handle multiple bounding boxes
                 bbox_list = bbox.split(';')
                 for single_bbox in bbox_list:
-                    objects_and_bboxes.append(f"{mapped_obj} [{single_bbox}]")
+                    coords = list(map(int, single_bbox.split(',')))
+                    coco_bbox = convert_to_coco_format(*coords)                    
+                    objects_and_bboxes.append(f"{mapped_obj} {coco_bbox}")
         
         # Add the extracted information to the results list
         results.append({

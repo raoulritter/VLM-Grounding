@@ -44,6 +44,7 @@ with open('../data/gt_bboxes/gt_bboxes.json', 'r') as f:
 hallucinations = []
 correctly_classified = []
 misclassified = []
+wrong_object = []
 instances = 0
 
 # Process each image and calculate IoU
@@ -72,7 +73,10 @@ for pred in predicted_data:
 
             if max_iou < 0.5:
                 # If IoU is less than 0.5, classify as a hallucination
-                hallucinations.append({"image_id": image_id, "pred_box": pred_box, "iou": max_iou})
+                if matched_gt_label == pred_label:
+                    hallucinations.append({"image_id": image_id, "pred_box": pred_box, "iou": max_iou})
+                else: 
+                    wrong_object.append({"image_id": image_id, "pred_box": pred_box, "iou": max_iou})
             else:
                 # Check if the labels match
                 if matched_gt_label == pred_label:
@@ -84,6 +88,7 @@ print(f"Total instances: {instances}")
 print(f"Number of hallucinations: {len(hallucinations)}")
 print(f"Number of correct classifications: {len(correctly_classified)}")
 print(f"Number of misclassifications: {len(misclassified)}")
+print(f"Number of wrong objects: {len(wrong_object)}")
 
 # Save the results to JSON files
 with open('../data/output/hallucinations.json', 'w') as f:
@@ -94,3 +99,6 @@ with open('../data/output/correctly_classified.json', 'w') as f:
 
 with open('../data/output/misclassified.json', 'w') as f:
     json.dump(misclassified, f, indent=4)
+
+with open('../data/output/wrong_object.json', 'w') as f:
+    json.dump(wrong_object, f, indent=4)

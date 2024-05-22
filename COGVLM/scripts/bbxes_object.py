@@ -190,7 +190,7 @@ def save_processed_data(processed_data, output_file):
 
 captions_file = '../data/captions/captions.json'
 objects_file = '../data/objects/objects.json'
-output_file = '../data/bbxes_objects/bbxes_objects.json'
+output_file = '../data/bbxes_objects/bboxes_objects.json'
 
 
 processed_data = extract_objects_and_bboxes(captions_file)

@@ -1,0 +1,60 @@
+adjusted_bbox_original_removed (skip_classes):
+Total instances: 544
+Number of hallucinations: 37
+Number of correct classifications: 483
+Number of misclassifications: 11
+Number of wrong objects: 13
+Correct instances: 531
+
+Hallucination percentage: 6.97%
+
+synonyms:
+Total instances: 919
+Number of hallucinations: 67
+Number of correct classifications: 802
+Number of misclassifications: 14
+Number of wrong objects: 36
+Correct instances: 883
+
+Hallucination percentage: 7.6%
+
+map_classes 0.4:
+Total instances: 1480
+Number of hallucinations: 97
+Number of correct classifications: 758
+Number of misclassifications: 184
+Number of wrong objects: 422
+Correct instances: 1480 - 422 = 1058
+
+Hallucination percentage: 9.2%
+
+
+map_classes 0.5:
+Total instances: 1067
+Number of hallucinations: 82
+Number of correct classifications: 661
+Number of misclassifications: 108
+Number of wrong objects: 205
+Correct instances: 862
+
+Hallucination percentage: 9.5%
+
+map_classes 0.6:
+Total instances: 848
+Number of hallucinations: 61
+Number of correct classifications: 649
+Number of misclassifications: 64
+Number of wrong objects: 67
+Correct instances: 781
+
+Hallucination percentage: 7.8%
+
+map_classes 0.7:
+Total instances: 600
+Number of hallucinations: 45
+Number of correct classifications: 468
+Number of misclassifications: 43
+Number of wrong objects: 39
+Correct instances: 561
+
+Hallucination percentage: 8%

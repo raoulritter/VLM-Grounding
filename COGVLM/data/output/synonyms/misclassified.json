@@ -14,6 +14,13 @@
         "gt_label": "bus"
     },
     {
+        "image_id": "000000121031.jpg",
+        "pred_box": "person [387.84, 158.75199999999998, 58.879999999999995, 96.965]",
+        "iou": 0.7244144798102448,
+        "pred_label": "person",
+        "gt_label": "horse"
+    },
+    {
         "image_id": "000000322844.jpg",
         "pred_box": "bear [104.64, 101.76, 254.88000000000002, 376.32]",
         "iou": 0.8949660821487315,
@@ -21,11 +28,11 @@
         "gt_label": "teddy bear"
     },
     {
-        "image_id": "000000407403.jpg",
-        "pred_box": "person [175.422, 144.0, 155.008, 227.0]",
-        "iou": 0.931573936164377,
-        "pred_label": "person",
-        "gt_label": "vase"
+        "image_id": "000000002587.jpg",
+        "pred_box": "handbag [35.0, 1.875, 464.0, 366.0]",
+        "iou": 0.8321243721309411,
+        "pred_label": "handbag",
+        "gt_label": "banana"
     },
     {
         "image_id": "000000196759.jpg",
@@ -42,6 +49,13 @@
         "gt_label": "train"
     },
     {
+        "image_id": "000000523807.jpg",
+        "pred_box": "person [87.0, 135.75, 319.0, 178.125]",
+        "iou": 0.9836087906439568,
+        "pred_label": "person",
+        "gt_label": "hot dog"
+    },
+    {
         "image_id": "000000132116.jpg",
         "pred_box": "broccoli [1.224, 268.056, 430.236, 342.72]",
         "iou": 0.9915330657783035,
@@ -56,27 +70,6 @@
         "gt_label": "bowl"
     },
     {
-        "image_id": "000000017714.jpg",
-        "pred_box": "cake [131.2, 245.76, 202.88, 204.48]",
-        "iou": 0.9457836576846769,
-        "pred_label": "cake",
-        "gt_label": "pizza"
-    },
-    {
-        "image_id": "000000037740.jpg",
-        "pred_box": "laptop [284.8, 149.76, 92.8, 77.76]",
-        "iou": 0.909532686230911,
-        "pred_label": "laptop",
-        "gt_label": "tv"
-    },
-    {
-        "image_id": "000000332455.jpg",
-        "pred_box": "chair [77.77499999999999, 3.2, 313.225, 627.84]",
-        "iou": 0.8175352906985169,
-        "pred_label": "chair",
-        "gt_label": "toilet"
-    },
-    {
         "image_id": "000000107087.jpg",
         "pred_box": "car [126.72, 64.05, 358.40000000000003, 330.498]",
         "iou": 0.7697565523851879,
@@ -84,10 +77,24 @@
         "gt_label": "chair"
     },
     {
-        "image_id": "000000386912.jpg",
-        "pred_box": "laptop [41.6, 248.16, 180.48, 192.96]",
-        "iou": 0.8181307165199979,
-        "pred_label": "laptop",
-        "gt_label": "tv"
+        "image_id": "000000276921.jpg",
+        "pred_box": "bear [38.927, 199.68, 204.484, 322.56]",
+        "iou": 0.9842413518864258,
+        "pred_label": "bear",
+        "gt_label": "teddy bear"
+    },
+    {
+        "image_id": "000000276921.jpg",
+        "pred_box": "bear [199.79399999999998, 227.83999999999997, 171.654, 377.59999999999997]",
+        "iou": 0.9878306472541061,
+        "pred_label": "bear",
+        "gt_label": "teddy bear"
+    },
+    {
+        "image_id": "000000498919.jpg",
+        "pred_box": "orange [46.656, 28.188, 141.696, 81.0]",
+        "iou": 0.8369074653032622,
+        "pred_label": "orange",
+        "gt_label": "apple"
     }
 ]

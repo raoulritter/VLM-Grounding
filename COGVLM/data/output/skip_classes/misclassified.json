@@ -1,0 +1,79 @@
+[
+    {
+        "image_id": "000000153527.jpg",
+        "pred_box": "bench [408.0, 64.875, 38.0, 58.875]",
+        "iou": 0.7825388567628302,
+        "pred_label": "bench",
+        "gt_label": "chair"
+    },
+    {
+        "image_id": "000000074256.jpg",
+        "pred_box": "train [0.0, 83.03999999999999, 394.24, 211.2]",
+        "iou": 0.6704068505285531,
+        "pred_label": "train",
+        "gt_label": "bus"
+    },
+    {
+        "image_id": "000000322844.jpg",
+        "pred_box": "bear [104.64, 101.76, 254.88000000000002, 376.32]",
+        "iou": 0.8949660821487315,
+        "pred_label": "bear",
+        "gt_label": "teddy bear"
+    },
+    {
+        "image_id": "000000132116.jpg",
+        "pred_box": "broccoli [1.224, 268.056, 430.236, 342.72]",
+        "iou": 0.9915330657783035,
+        "pred_label": "broccoli",
+        "gt_label": "bowl"
+    },
+    {
+        "image_id": "000000132116.jpg",
+        "pred_box": "broccoli [335.37600000000003, 0.0, 275.40000000000003, 342.108]",
+        "iou": 0.9792561538700392,
+        "pred_label": "broccoli",
+        "gt_label": "bowl"
+    },
+    {
+        "image_id": "000000107087.jpg",
+        "pred_box": "car [126.72, 64.05, 358.40000000000003, 330.498]",
+        "iou": 0.7697565523851879,
+        "pred_label": "car",
+        "gt_label": "chair"
+    },
+    {
+        "image_id": "000000189436.jpg",
+        "pred_box": "bear [0.0, 57.599999999999994, 383.52000000000004, 552.96]",
+        "iou": 0.9774118717013407,
+        "pred_label": "bear",
+        "gt_label": "teddy bear"
+    },
+    {
+        "image_id": "000000276921.jpg",
+        "pred_box": "bear [38.927, 199.68, 204.484, 322.56]",
+        "iou": 0.9842413518864258,
+        "pred_label": "bear",
+        "gt_label": "teddy bear"
+    },
+    {
+        "image_id": "000000276921.jpg",
+        "pred_box": "bear [199.79399999999998, 227.83999999999997, 171.654, 377.59999999999997]",
+        "iou": 0.9878306472541061,
+        "pred_label": "bear",
+        "gt_label": "teddy bear"
+    },
+    {
+        "image_id": "000000498919.jpg",
+        "pred_box": "orange [46.656, 28.188, 141.696, 81.0]",
+        "iou": 0.8369074653032622,
+        "pred_label": "orange",
+        "gt_label": "apple"
+    },
+    {
+        "image_id": "000000044068.jpg",
+        "pred_box": "bear [175.2, 154.88, 236.16, 353.28000000000003]",
+        "iou": 0.9308304091306312,
+        "pred_label": "bear",
+        "gt_label": "teddy bear"
+    }
+]

@@ -1,0 +1,1290 @@
+[
+    {
+        "image_id": "000000488385.jpg",
+        "pred_box": "umbrella [0.0, 0.0, 478.56, 638.72]",
+        "iou": 0.7126561205514507,
+        "pred_label": "umbrella",
+        "gt_label": "motorcycle"
+    },
+    {
+        "image_id": "000000165831.jpg",
+        "pred_box": "bottle [52.480000000000004, 109.92, 510.72, 231.84]",
+        "iou": 0.6116483015125216,
+        "pred_label": "bottle",
+        "gt_label": "carrot"
+    },
+    {
+        "image_id": "000000450075.jpg",
+        "pred_box": "bottle [369.91999999999996, 161.28, 268.8, 317.28000000000003]",
+        "iou": 0.5120247874740853,
+        "pred_label": "bottle",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000450075.jpg",
+        "pred_box": "bottle [124.80000000000001, 275.03999999999996, 211.84, 203.51999999999998]",
+        "iou": 0.5979785175870936,
+        "pred_label": "bottle",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000569825.jpg",
+        "pred_box": "baseball bat [190.29399999999998, 21.0, 113.23, 446.0]",
+        "iou": 0.954877673528897,
+        "pred_label": "baseball bat",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000161799.jpg",
+        "pred_box": "skateboard [190.07999999999998, 74.725, 122.88, 163.114]",
+        "iou": 0.9115500585634472,
+        "pred_label": "skateboard",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000004395.jpg",
+        "pred_box": "bottle [0.0, 199.68, 422.45, 439.04]",
+        "iou": 0.6829322454976908,
+        "pred_label": "bottle",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000183104.jpg",
+        "pred_box": "mouse [0.0, 0.0, 304.64, 474.572]",
+        "iou": 0.5080734897935226,
+        "pred_label": "mouse",
+        "gt_label": "giraffe"
+    },
+    {
+        "image_id": "000000003845.jpg",
+        "pred_box": "pizza [5.0, 40.875, 488.0, 313.875]",
+        "iou": 0.8385327430037858,
+        "pred_label": "pizza",
+        "gt_label": "dining table"
+    },
+    {
+        "image_id": "000000577584.jpg",
+        "pred_box": "carrot [65.626, 276.48, 154.66, 85.76]",
+        "iou": 0.9245084452595046,
+        "pred_label": "carrot",
+        "gt_label": "bowl"
+    },
+    {
+        "image_id": "000000187585.jpg",
+        "pred_box": "skateboard [108.80000000000001, 0.872, 432.64000000000004, 340.08]",
+        "iou": 0.9624642893697652,
+        "pred_label": "skateboard",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000529148.jpg",
+        "pred_box": "tv [290.56, 213.426, 209.92000000000002, 211.296]",
+        "iou": 0.9227796114703536,
+        "pred_label": "tv",
+        "gt_label": "laptop"
+    },
+    {
+        "image_id": "000000262895.jpg",
+        "pred_box": "suitcase [0.0, 137.0, 332.664, 362.0]",
+        "iou": 0.7300396857536244,
+        "pred_label": "suitcase",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000038678.jpg",
+        "pred_box": "handbag [20.639999999999997, 340.48, 114.24, 94.72]",
+        "iou": 0.9479900319066835,
+        "pred_label": "handbag",
+        "gt_label": "donut"
+    },
+    {
+        "image_id": "000000153527.jpg",
+        "pred_box": "bench [408.0, 64.875, 38.0, 58.875]",
+        "iou": 0.7825388567628302,
+        "pred_label": "bench",
+        "gt_label": "chair"
+    },
+    {
+        "image_id": "000000551822.jpg",
+        "pred_box": "pizza [0.0, 125.028, 638.72, 322.536]",
+        "iou": 0.962349292633208,
+        "pred_label": "pizza",
+        "gt_label": "dining table"
+    },
+    {
+        "image_id": "000000074256.jpg",
+        "pred_box": "train [0.0, 83.03999999999999, 394.24, 211.2]",
+        "iou": 0.6704068505285531,
+        "pred_label": "train",
+        "gt_label": "bus"
+    },
+    {
+        "image_id": "000000147740.jpg",
+        "pred_box": "bottle [189.44, 314.40000000000003, 263.68, 164.16000000000003]",
+        "iou": 0.8367159303410395,
+        "pred_label": "bottle",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000226662.jpg",
+        "pred_box": "car [8.96, 78.82199999999999, 618.24, 368.74199999999996]",
+        "iou": 0.7311592972011698,
+        "pred_label": "car",
+        "gt_label": "motorcycle"
+    },
+    {
+        "image_id": "000000243148.jpg",
+        "pred_box": "snowboard [0.0, 0.0, 638.72, 358.92]",
+        "iou": 0.5920847434275999,
+        "pred_label": "snowboard",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000047112.jpg",
+        "pred_box": "bottle [293.12, 12.0, 92.16, 192.48000000000002]",
+        "iou": 0.9469387772450629,
+        "pred_label": "bottle",
+        "gt_label": "wine glass"
+    },
+    {
+        "image_id": "000000047112.jpg",
+        "pred_box": "bottle [392.96, 32.160000000000004, 89.60000000000001, 177.6]",
+        "iou": 0.9154844495829891,
+        "pred_label": "bottle",
+        "gt_label": "wine glass"
+    },
+    {
+        "image_id": "000000235241.jpg",
+        "pred_box": "bottle [186.88, 157.563, 225.27999999999997, 263.459]",
+        "iou": 0.5586337097491328,
+        "pred_label": "bottle",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000291490.jpg",
+        "pred_box": "knife [2.56, 2.751, 634.88, 383.961]",
+        "iou": 0.9846935498048138,
+        "pred_label": "knife",
+        "gt_label": "bed"
+    },
+    {
+        "image_id": "000000449190.jpg",
+        "pred_box": "kite [216.32000000000002, 160.473, 189.44, 185.244]",
+        "iou": 0.9483375799232395,
+        "pred_label": "kite",
+        "gt_label": "sandwich"
+    },
+    {
+        "image_id": "000000449190.jpg",
+        "pred_box": "carrot [284.16, 161.909, 119.03999999999999, 157.96]",
+        "iou": 0.5323137792221768,
+        "pred_label": "carrot",
+        "gt_label": "sandwich"
+    },
+    {
+        "image_id": "000000449190.jpg",
+        "pred_box": "pizza [284.16, 161.909, 119.03999999999999, 157.96]",
+        "iou": 0.5323137792221768,
+        "pred_label": "pizza",
+        "gt_label": "sandwich"
+    },
+    {
+        "image_id": "000000335954.jpg",
+        "pred_box": "boat [0.0, 127.29599999999999, 283.356, 419.83200000000005]",
+        "iou": 0.987605257476489,
+        "pred_label": "boat",
+        "gt_label": "bowl"
+    },
+    {
+        "image_id": "000000335954.jpg",
+        "pred_box": "boat [271.116, 156.672, 339.66, 378.216]",
+        "iou": 0.9740944608525373,
+        "pred_label": "boat",
+        "gt_label": "bowl"
+    },
+    {
+        "image_id": "000000335954.jpg",
+        "pred_box": "banana [271.116, 156.672, 339.66, 378.216]",
+        "iou": 0.9740944608525373,
+        "pred_label": "banana",
+        "gt_label": "bowl"
+    },
+    {
+        "image_id": "000000335954.jpg",
+        "pred_box": "banana [0.0, 127.29599999999999, 283.356, 419.83200000000005]",
+        "iou": 0.987605257476489,
+        "pred_label": "banana",
+        "gt_label": "bowl"
+    },
+    {
+        "image_id": "000000131444.jpg",
+        "pred_box": "suitcase [63.84, 243.2, 414.71999999999997, 395.52]",
+        "iou": 0.6036159677313049,
+        "pred_label": "suitcase",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000321214.jpg",
+        "pred_box": "cake [0.0, 0.0, 611.8399999999999, 464.64]",
+        "iou": 0.9759801464749547,
+        "pred_label": "cake",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000282037.jpg",
+        "pred_box": "baseball bat [121.6, 92.943, 77.44, 124.82200000000002]",
+        "iou": 0.8305381069821417,
+        "pred_label": "baseball bat",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000282037.jpg",
+        "pred_box": "baseball bat [195.84, 70.493, 17.92, 14.817]",
+        "iou": 0.641316998934621,
+        "pred_label": "baseball bat",
+        "gt_label": "sports ball"
+    },
+    {
+        "image_id": "000000282037.jpg",
+        "pred_box": "baseball bat [373.12, 191.274, 265.59999999999997, 256.37899999999996]",
+        "iou": 0.7883481022661776,
+        "pred_label": "baseball bat",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000065074.jpg",
+        "pred_box": "couch [0.0, 325.76, 358.28, 257.92]",
+        "iou": 0.559278585668611,
+        "pred_label": "couch",
+        "gt_label": "bed"
+    },
+    {
+        "image_id": "000000191672.jpg",
+        "pred_box": "surfboard [366.08, 152.796, 111.35999999999999, 100.152]",
+        "iou": 0.913761945389833,
+        "pred_label": "surfboard",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000461009.jpg",
+        "pred_box": "bottle [0.0, 239.904, 610.776, 370.872]",
+        "iou": 0.6293885873663343,
+        "pred_label": "bottle",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000461009.jpg",
+        "pred_box": "banana [230.112, 257.03999999999996, 116.892, 105.264]",
+        "iou": 0.971302865509744,
+        "pred_label": "banana",
+        "gt_label": "apple"
+    },
+    {
+        "image_id": "000000007977.jpg",
+        "pred_box": "skateboard [108.537, 146.56, 157.87199999999999, 277.12]",
+        "iou": 0.9363123514539704,
+        "pred_label": "skateboard",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000080022.jpg",
+        "pred_box": "skis [293.12, 258.156, 103.68, 70.29]",
+        "iou": 0.5311110179536901,
+        "pred_label": "skis",
+        "gt_label": "tennis racket"
+    },
+    {
+        "image_id": "000000322844.jpg",
+        "pred_box": "bear [104.64, 101.76, 254.88000000000002, 376.32]",
+        "iou": 0.8949660821487315,
+        "pred_label": "bear",
+        "gt_label": "teddy bear"
+    },
+    {
+        "image_id": "000000002587.jpg",
+        "pred_box": "backpack [35.0, 1.875, 464.0, 366.0]",
+        "iou": 0.8321243721309411,
+        "pred_label": "backpack",
+        "gt_label": "banana"
+    },
+    {
+        "image_id": "000000181499.jpg",
+        "pred_box": "handbag [165.12, 382.698, 93.44, 128.763]",
+        "iou": 0.7186639044124224,
+        "pred_label": "handbag",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000064462.jpg",
+        "pred_box": "suitcase [172.0, 50.274, 146.0, 235.87199999999999]",
+        "iou": 0.6938459242819612,
+        "pred_label": "suitcase",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000357888.jpg",
+        "pred_box": "bottle [327.68, 240.48, 216.32000000000002, 204.96]",
+        "iou": 0.5516782836868863,
+        "pred_label": "bottle",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000263068.jpg",
+        "pred_box": "skateboard [197.01, 42.0, 81.51, 171.0]",
+        "iou": 0.9435935931855456,
+        "pred_label": "skateboard",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000200961.jpg",
+        "pred_box": "backpack [259.84000000000003, 200.26299999999998, 65.28, 145.18]",
+        "iou": 0.6169134261683081,
+        "pred_label": "backpack",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000407403.jpg",
+        "pred_box": "baseball bat [175.422, 144.0, 155.008, 227.0]",
+        "iou": 0.931573936164377,
+        "pred_label": "baseball bat",
+        "gt_label": "vase"
+    },
+    {
+        "image_id": "000000344795.jpg",
+        "pred_box": "spoon [224.0, 153.786, 197.12, 111.54899999999999]",
+        "iou": 0.9553241856877761,
+        "pred_label": "spoon",
+        "gt_label": "cake"
+    },
+    {
+        "image_id": "000000392818.jpg",
+        "pred_box": "backpack [4.0, 157.85, 495.0, 277.365]",
+        "iou": 0.629147325008592,
+        "pred_label": "backpack",
+        "gt_label": "dog"
+    },
+    {
+        "image_id": "000000196759.jpg",
+        "pred_box": "car [37.120000000000005, 158.4, 573.44, 266.88]",
+        "iou": 0.9336708151711339,
+        "pred_label": "car",
+        "gt_label": "truck"
+    },
+    {
+        "image_id": "000000296222.jpg",
+        "pred_box": "bottle [133.12, 144.0, 354.56000000000006, 314.40000000000003]",
+        "iou": 0.6497234411086807,
+        "pred_label": "bottle",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000429109.jpg",
+        "pred_box": "airplane [111.35999999999999, 249.368, 264.96, 152.012]",
+        "iou": 0.9858200488481738,
+        "pred_label": "airplane",
+        "gt_label": "bus"
+    },
+    {
+        "image_id": "000000429109.jpg",
+        "pred_box": "bus [0.64, 170.8, 183.67999999999998, 97.35600000000001]",
+        "iou": 0.7821177159283083,
+        "pred_label": "bus",
+        "gt_label": "train"
+    },
+    {
+        "image_id": "000000060886.jpg",
+        "pred_box": "dog [170.0, 148.518, 44.0, 89.57700000000001]",
+        "iou": 0.7643878091829042,
+        "pred_label": "dog",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000060886.jpg",
+        "pred_box": "dog [294.0, 151.51500000000001, 50.0, 87.57900000000001]",
+        "iou": 0.8327318924010984,
+        "pred_label": "dog",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000060886.jpg",
+        "pred_box": "dog [89.0, 135.53099999999998, 47.0, 84.58200000000001]",
+        "iou": 0.7568651686190959,
+        "pred_label": "dog",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000060886.jpg",
+        "pred_box": "sports ball [0.0, 21.645, 499.0, 310.356]",
+        "iou": 0.5416430254013295,
+        "pred_label": "sports ball",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000284445.jpg",
+        "pred_box": "backpack [166.4, 348.678, 133.12, 152.65800000000002]",
+        "iou": 0.52606429132281,
+        "pred_label": "backpack",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000053909.jpg",
+        "pred_box": "tv [90.72, 120.32, 257.28000000000003, 376.32]",
+        "iou": 0.620269299824032,
+        "pred_label": "tv",
+        "gt_label": "cell phone"
+    },
+    {
+        "image_id": "000000148508.jpg",
+        "pred_box": "car [0.64, 193.8, 435.84000000000003, 226.10000000000002]",
+        "iou": 0.5885429998881401,
+        "pred_label": "car",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000148508.jpg",
+        "pred_box": "umbrella [0.0, 166.6, 638.72, 257.125]",
+        "iou": 0.9801647654404826,
+        "pred_label": "umbrella",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000459396.jpg",
+        "pred_box": "frisbee [0.0, 185.436, 610.776, 425.34]",
+        "iou": 0.5559173907211403,
+        "pred_label": "frisbee",
+        "gt_label": "cow"
+    },
+    {
+        "image_id": "000000523807.jpg",
+        "pred_box": "cake [87.0, 135.75, 319.0, 178.125]",
+        "iou": 0.9836087906439568,
+        "pred_label": "cake",
+        "gt_label": "hot dog"
+    },
+    {
+        "image_id": "000000297147.jpg",
+        "pred_box": "car [0.0, 28.32, 638.72, 450.23999999999995]",
+        "iou": 0.8543144896085749,
+        "pred_label": "car",
+        "gt_label": "motorcycle"
+    },
+    {
+        "image_id": "000000551439.jpg",
+        "pred_box": "backpack [90.951, 191.35999999999999, 188.307, 201.6]",
+        "iou": 0.9287839393366053,
+        "pred_label": "backpack",
+        "gt_label": "book"
+    },
+    {
+        "image_id": "000000463542.jpg",
+        "pred_box": "skis [261.12, 100.96199999999999, 30.72, 38.339999999999996]",
+        "iou": 0.8291771851043503,
+        "pred_label": "skis",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000463542.jpg",
+        "pred_box": "skis [96.0, 129.078, 71.68, 109.908]",
+        "iou": 0.7804440804224572,
+        "pred_label": "skis",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000463542.jpg",
+        "pred_box": "skis [497.28000000000003, 153.35999999999999, 56.959999999999994, 99.68400000000001]",
+        "iou": 0.8219442539548586,
+        "pred_label": "skis",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000463542.jpg",
+        "pred_box": "skis [289.28000000000003, 158.898, 56.31999999999999, 100.11]",
+        "iou": 0.7807427454799722,
+        "pred_label": "skis",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000558114.jpg",
+        "pred_box": "bench [249.60000000000002, 167.51999999999998, 142.08, 296.15999999999997]",
+        "iou": 0.8479357047222705,
+        "pred_label": "bench",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000558114.jpg",
+        "pred_box": "sports ball [0.0, 170.88, 88.32000000000001, 307.68]",
+        "iou": 0.7702739357340207,
+        "pred_label": "sports ball",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000558114.jpg",
+        "pred_box": "sports ball [316.15999999999997, 179.04, 167.68, 299.52]",
+        "iou": 0.9403855533651336,
+        "pred_label": "sports ball",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000558114.jpg",
+        "pred_box": "sports ball [551.68, 149.76, 87.04, 319.68]",
+        "iou": 0.9186237088029473,
+        "pred_label": "sports ball",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000558114.jpg",
+        "pred_box": "sports ball [441.59999999999997, 160.32000000000002, 120.32, 304.8]",
+        "iou": 0.9419452286191047,
+        "pred_label": "sports ball",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000322944.jpg",
+        "pred_box": "dog [12.339, 213.76000000000002, 401.703, 407.04]",
+        "iou": 0.9739606677706304,
+        "pred_label": "dog",
+        "gt_label": "teddy bear"
+    },
+    {
+        "image_id": "000000322211.jpg",
+        "pred_box": "donut [111.35999999999999, 0.0, 527.36, 473.28]",
+        "iou": 0.9550625232490575,
+        "pred_label": "donut",
+        "gt_label": "dining table"
+    },
+    {
+        "image_id": "000000411953.jpg",
+        "pred_box": "bottle [73.0, 129.75, 221.0, 244.125]",
+        "iou": 0.5833930941022619,
+        "pred_label": "bottle",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000289393.jpg",
+        "pred_box": "bear [78.08, 204.48, 275.2, 207.35999999999999]",
+        "iou": 0.9597719149856108,
+        "pred_label": "bear",
+        "gt_label": "cow"
+    },
+    {
+        "image_id": "000000132116.jpg",
+        "pred_box": "broccoli [1.224, 268.056, 430.236, 342.72]",
+        "iou": 0.9915330657783035,
+        "pred_label": "broccoli",
+        "gt_label": "bowl"
+    },
+    {
+        "image_id": "000000132116.jpg",
+        "pred_box": "broccoli [335.37600000000003, 0.0, 275.40000000000003, 342.108]",
+        "iou": 0.9792561538700392,
+        "pred_label": "broccoli",
+        "gt_label": "bowl"
+    },
+    {
+        "image_id": "000000132116.jpg",
+        "pred_box": "cow [405.144, 200.73600000000002, 79.56, 80.784]",
+        "iou": 0.7750498446315103,
+        "pred_label": "cow",
+        "gt_label": "broccoli"
+    },
+    {
+        "image_id": "000000017714.jpg",
+        "pred_box": "cake [131.2, 245.76, 202.88, 204.48]",
+        "iou": 0.9457836576846769,
+        "pred_label": "cake",
+        "gt_label": "pizza"
+    },
+    {
+        "image_id": "000000502168.jpg",
+        "pred_box": "boat [513.9200000000001, 312.814, 53.120000000000005, 143.812]",
+        "iou": 0.732820717513896,
+        "pred_label": "boat",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000502168.jpg",
+        "pred_box": "boat [551.68, 283.96, 62.72, 160.29999999999998]",
+        "iou": 0.8349845872534913,
+        "pred_label": "boat",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000502168.jpg",
+        "pred_box": "boat [435.20000000000005, 335.256, 84.48, 121.37]",
+        "iou": 0.9009216313272292,
+        "pred_label": "boat",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000502168.jpg",
+        "pred_box": "boat [433.92, 229.458, 37.120000000000005, 108.54599999999999]",
+        "iou": 0.9059950230232803,
+        "pred_label": "boat",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000502168.jpg",
+        "pred_box": "boat [472.32, 254.19000000000003, 39.68, 90.684]",
+        "iou": 0.8351048079720086,
+        "pred_label": "boat",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000321557.jpg",
+        "pred_box": "train [0.0, 309.12, 545.359, 329.6]",
+        "iou": 0.5005974555257434,
+        "pred_label": "train",
+        "gt_label": "motorcycle"
+    },
+    {
+        "image_id": "000000037740.jpg",
+        "pred_box": "laptop [284.8, 149.76, 92.8, 77.76]",
+        "iou": 0.909532686230911,
+        "pred_label": "laptop",
+        "gt_label": "tv"
+    },
+    {
+        "image_id": "000000221502.jpg",
+        "pred_box": "vase [7.68, 106.88000000000001, 126.08000000000001, 145.6]",
+        "iou": 0.8346941634232574,
+        "pred_label": "vase",
+        "gt_label": "potted plant"
+    },
+    {
+        "image_id": "000000297353.jpg",
+        "pred_box": "backpack [174.08, 256.0, 286.72, 229.12]",
+        "iou": 0.5162614858631459,
+        "pred_label": "backpack",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000013004.jpg",
+        "pred_box": "sandwich [12.0, 64.0, 361.875, 339.0]",
+        "iou": 0.6872133248621877,
+        "pred_label": "sandwich",
+        "gt_label": "dining table"
+    },
+    {
+        "image_id": "000000332455.jpg",
+        "pred_box": "chair [77.77499999999999, 3.2, 313.225, 627.84]",
+        "iou": 0.8175352906985169,
+        "pred_label": "chair",
+        "gt_label": "toilet"
+    },
+    {
+        "image_id": "000000093353.jpg",
+        "pred_box": "sandwich [156.16, 80.64, 482.56, 364.8]",
+        "iou": 0.9907112789459303,
+        "pred_label": "sandwich",
+        "gt_label": "hot dog"
+    },
+    {
+        "image_id": "000000100238.jpg",
+        "pred_box": "tv [6.4, 24.959999999999997, 203.52, 453.59999999999997]",
+        "iou": 0.9237690578844762,
+        "pred_label": "tv",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000100238.jpg",
+        "pred_box": "tv [194.56, 77.76, 231.68, 400.79999999999995]",
+        "iou": 0.9856299964401004,
+        "pred_label": "tv",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000100238.jpg",
+        "pred_box": "tv [341.76, 2.4, 186.88, 471.84]",
+        "iou": 0.9581899623224381,
+        "pred_label": "tv",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000100238.jpg",
+        "pred_box": "tv [483.84000000000003, 212.16, 139.52, 266.40000000000003]",
+        "iou": 0.9437159789161299,
+        "pred_label": "tv",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000066706.jpg",
+        "pred_box": "cake [102.816, 239.292, 139.536, 126.07199999999999]",
+        "iou": 0.636692943424746,
+        "pred_label": "cake",
+        "gt_label": "banana"
+    },
+    {
+        "image_id": "000000073702.jpg",
+        "pred_box": "toilet [0.0, 0.0, 462.608, 638.72]",
+        "iou": 0.509656449500957,
+        "pred_label": "toilet",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000434459.jpg",
+        "pred_box": "boat [366.08, 43.872, 239.36, 411.757]",
+        "iou": 0.9745334547179966,
+        "pred_label": "boat",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000434459.jpg",
+        "pred_box": "boat [160.64, 43.872, 154.24, 223.016]",
+        "iou": 0.8284259552075189,
+        "pred_label": "boat",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000465129.jpg",
+        "pred_box": "backpack [113.91999999999999, 130.56, 199.68, 348.0]",
+        "iou": 0.8655432972022629,
+        "pred_label": "backpack",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000458054.jpg",
+        "pred_box": "spoon [239.36, 172.53, 186.88, 130.356]",
+        "iou": 0.6761556224843187,
+        "pred_label": "spoon",
+        "gt_label": "toilet"
+    },
+    {
+        "image_id": "000000455448.jpg",
+        "pred_box": "handbag [0.9560000000000001, 166.4, 358.5, 465.91999999999996]",
+        "iou": 0.9640524518474829,
+        "pred_label": "handbag",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000229858.jpg",
+        "pred_box": "zebra [216.32000000000002, 125.43, 122.88, 322.455]",
+        "iou": 0.8911729906210907,
+        "pred_label": "zebra",
+        "gt_label": "cow"
+    },
+    {
+        "image_id": "000000552842.jpg",
+        "pred_box": "baseball bat [335.36, 206.24099999999999, 129.28, 111.447]",
+        "iou": 0.8404973097451879,
+        "pred_label": "baseball bat",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000085195.jpg",
+        "pred_box": "oven [263.68, 104.64, 212.48000000000002, 189.12]",
+        "iou": 0.9513556003604194,
+        "pred_label": "oven",
+        "gt_label": "cake"
+    },
+    {
+        "image_id": "000000085195.jpg",
+        "pred_box": "sandwich [0.64, 89.28, 638.08, 389.28000000000003]",
+        "iou": 0.9878048234270081,
+        "pred_label": "sandwich",
+        "gt_label": "dining table"
+    },
+    {
+        "image_id": "000000107087.jpg",
+        "pred_box": "car [126.72, 64.05, 358.40000000000003, 330.498]",
+        "iou": 0.7697565523851879,
+        "pred_label": "car",
+        "gt_label": "chair"
+    },
+    {
+        "image_id": "000000387916.jpg",
+        "pred_box": "skis [323.2, 258.03, 44.800000000000004, 121.82399999999998]",
+        "iou": 0.9339477076414677,
+        "pred_label": "skis",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000387916.jpg",
+        "pred_box": "skis [494.08000000000004, 257.18399999999997, 40.96, 120.978]",
+        "iou": 0.8877267270293518,
+        "pred_label": "skis",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000387916.jpg",
+        "pred_box": "skis [213.76000000000002, 307.944, 33.28, 70.218]",
+        "iou": 0.7782793407673249,
+        "pred_label": "skis",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000387916.jpg",
+        "pred_box": "skis [417.28000000000003, 273.681, 34.56, 101.943]",
+        "iou": 0.8245590783349301,
+        "pred_label": "skis",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000387916.jpg",
+        "pred_box": "skis [339.84000000000003, 259.299, 101.76, 162.43200000000002]",
+        "iou": 0.8987937806099938,
+        "pred_label": "skis",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000387916.jpg",
+        "pred_box": "skis [167.68, 273.681, 44.800000000000004, 98.13600000000001]",
+        "iou": 0.6693478610960892,
+        "pred_label": "skis",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000387916.jpg",
+        "pred_box": "skis [261.12, 270.72, 38.4, 109.134]",
+        "iou": 0.8332471434200173,
+        "pred_label": "skis",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000387916.jpg",
+        "pred_box": "skis [127.36000000000001, 276.642, 56.959999999999994, 133.668]",
+        "iou": 0.7734041450323149,
+        "pred_label": "skis",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000580294.jpg",
+        "pred_box": "oven [85.76, 285.29200000000003, 273.92, 152.392]",
+        "iou": 0.5237713146471338,
+        "pred_label": "oven",
+        "gt_label": "spoon"
+    },
+    {
+        "image_id": "000000189436.jpg",
+        "pred_box": "bear [0.0, 57.599999999999994, 383.52000000000004, 552.96]",
+        "iou": 0.9774118717013407,
+        "pred_label": "bear",
+        "gt_label": "teddy bear"
+    },
+    {
+        "image_id": "000000189436.jpg",
+        "pred_box": "scissors [79.2, 240.64, 245.76, 131.2]",
+        "iou": 0.9859030214547823,
+        "pred_label": "scissors",
+        "gt_label": "tie"
+    },
+    {
+        "image_id": "000000189436.jpg",
+        "pred_box": "surfboard [0.0, 403.84000000000003, 478.56, 234.88]",
+        "iou": 0.9253384952825048,
+        "pred_label": "surfboard",
+        "gt_label": "dining table"
+    },
+    {
+        "image_id": "000000470924.jpg",
+        "pred_box": "dog [244.48000000000002, 75.84, 110.07999999999998, 148.8]",
+        "iou": 0.9002900753752157,
+        "pred_label": "dog",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000470924.jpg",
+        "pred_box": "dog [401.92, 118.56, 211.20000000000002, 360.0]",
+        "iou": 0.9222672927646262,
+        "pred_label": "dog",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000470924.jpg",
+        "pred_box": "dog [10.24, 108.48, 216.32000000000002, 339.84]",
+        "iou": 0.9204706166872645,
+        "pred_label": "dog",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000470924.jpg",
+        "pred_box": "dog [341.76, 75.84, 140.8, 225.6]",
+        "iou": 0.9084450839428195,
+        "pred_label": "dog",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000470924.jpg",
+        "pred_box": "bottle [238.07999999999998, 244.8, 29.439999999999998, 73.44]",
+        "iou": 0.8866059920988514,
+        "pred_label": "bottle",
+        "gt_label": "cup"
+    },
+    {
+        "image_id": "000000470924.jpg",
+        "pred_box": "bottle [293.12, 154.08, 20.48, 63.36]",
+        "iou": 0.6274487924729322,
+        "pred_label": "bottle",
+        "gt_label": "cup"
+    },
+    {
+        "image_id": "000000470924.jpg",
+        "pred_box": "bottle [385.28, 336.0, 38.4, 58.56]",
+        "iou": 0.589259087435739,
+        "pred_label": "bottle",
+        "gt_label": "wine glass"
+    },
+    {
+        "image_id": "000000171382.jpg",
+        "pred_box": "skateboard [99.84, 13.632, 208.64000000000001, 241.968]",
+        "iou": 0.9391296885046593,
+        "pred_label": "skateboard",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000342971.jpg",
+        "pred_box": "backpack [34.44, 202.24, 163.016, 340.48]",
+        "iou": 0.5327904052340002,
+        "pred_label": "backpack",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000442306.jpg",
+        "pred_box": "umbrella [245.12, 136.96, 166.4, 290.56]",
+        "iou": 0.5767006474362503,
+        "pred_label": "umbrella",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000254368.jpg",
+        "pred_box": "backpack [39.983999999999995, 151.68, 350.84000000000003, 312.96]",
+        "iou": 0.7534172466329438,
+        "pred_label": "backpack",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000428562.jpg",
+        "pred_box": "knife [2.56, 2.88, 632.3199999999999, 470.88]",
+        "iou": 0.5956372838313929,
+        "pred_label": "knife",
+        "gt_label": "sheep"
+    },
+    {
+        "image_id": "000000566282.jpg",
+        "pred_box": "suitcase [46.08, 83.07000000000001, 215.04000000000002, 267.102]",
+        "iou": 0.6074135227766656,
+        "pred_label": "suitcase",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000566282.jpg",
+        "pred_box": "suitcase [353.28000000000003, 38.766, 120.32, 275.622]",
+        "iou": 0.7753810434839882,
+        "pred_label": "suitcase",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000119445.jpg",
+        "pred_box": "baseball bat [421.76, 264.546, 167.68, 133.338]",
+        "iou": 0.718122635267037,
+        "pred_label": "baseball bat",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000378673.jpg",
+        "pred_box": "skateboard [221.44, 43.878, 196.48, 231.318]",
+        "iou": 0.870918530923475,
+        "pred_label": "skateboard",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000276921.jpg",
+        "pred_box": "bear [38.927, 199.68, 204.484, 322.56]",
+        "iou": 0.9842413518864258,
+        "pred_label": "bear",
+        "gt_label": "teddy bear"
+    },
+    {
+        "image_id": "000000276921.jpg",
+        "pred_box": "bear [199.79399999999998, 227.83999999999997, 171.654, 377.59999999999997]",
+        "iou": 0.9878306472541061,
+        "pred_label": "bear",
+        "gt_label": "teddy bear"
+    },
+    {
+        "image_id": "000000527695.jpg",
+        "pred_box": "spoon [51.84, 0.0, 586.88, 424.722]",
+        "iou": 0.9906388913787946,
+        "pred_label": "spoon",
+        "gt_label": "bowl"
+    },
+    {
+        "image_id": "000000214720.jpg",
+        "pred_box": "backpack [16.875, 239.0, 295.125, 98.0]",
+        "iou": 0.648115578442703,
+        "pred_label": "backpack",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000521540.jpg",
+        "pred_box": "sandwich [1.28, 0.96, 637.44, 477.6]",
+        "iou": 0.9863595812940502,
+        "pred_label": "sandwich",
+        "gt_label": "dining table"
+    },
+    {
+        "image_id": "000000318114.jpg",
+        "pred_box": "sandwich [164.78, 155.232, 187.10999999999999, 115.192]",
+        "iou": 0.9602861652772525,
+        "pred_label": "sandwich",
+        "gt_label": "cake"
+    },
+    {
+        "image_id": "000000318114.jpg",
+        "pred_box": "sandwich [120.505, 100.71600000000001, 259.105, 189.728]",
+        "iou": 0.9620992535187739,
+        "pred_label": "sandwich",
+        "gt_label": "bowl"
+    },
+    {
+        "image_id": "000000318114.jpg",
+        "pred_box": "bottle [10.78, 7.084, 128.59, 202.356]",
+        "iou": 0.9449282063002578,
+        "pred_label": "bottle",
+        "gt_label": "cup"
+    },
+    {
+        "image_id": "000000216636.jpg",
+        "pred_box": "oven [0.0, 0.0, 458.24, 274.134]",
+        "iou": 0.7893099035292682,
+        "pred_label": "oven",
+        "gt_label": "cake"
+    },
+    {
+        "image_id": "000000228436.jpg",
+        "pred_box": "knife [0.0, 203.7, 638.72, 279.84499999999997]",
+        "iou": 0.6380981377052845,
+        "pred_label": "knife",
+        "gt_label": "bicycle"
+    },
+    {
+        "image_id": "000000228436.jpg",
+        "pred_box": "sink [1.28, 128.04, 637.44, 330.285]",
+        "iou": 0.5783430480218009,
+        "pred_label": "sink",
+        "gt_label": "bicycle"
+    },
+    {
+        "image_id": "000000354547.jpg",
+        "pred_box": "suitcase [90.951, 124.80000000000001, 177.20499999999998, 504.96000000000004]",
+        "iou": 0.8456356850648427,
+        "pred_label": "suitcase",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000525247.jpg",
+        "pred_box": "tv [195.84, 21.776999999999997, 442.88, 390.70500000000004]",
+        "iou": 0.9763947781834025,
+        "pred_label": "tv",
+        "gt_label": "laptop"
+    },
+    {
+        "image_id": "000000386912.jpg",
+        "pred_box": "laptop [41.6, 248.16, 180.48, 192.96]",
+        "iou": 0.8181307165199979,
+        "pred_label": "laptop",
+        "gt_label": "tv"
+    },
+    {
+        "image_id": "000000537827.jpg",
+        "pred_box": "sports ball [99.84, 164.0, 144.64000000000001, 234.79999999999998]",
+        "iou": 0.9110696968611963,
+        "pred_label": "sports ball",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000537827.jpg",
+        "pred_box": "sports ball [433.92, 114.39999999999999, 70.4, 243.2]",
+        "iou": 0.9134656287380384,
+        "pred_label": "sports ball",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000537827.jpg",
+        "pred_box": "baseball glove [126.72, 202.8, 113.91999999999999, 194.79999999999998]",
+        "iou": 0.6829707153270536,
+        "pred_label": "baseball glove",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000537827.jpg",
+        "pred_box": "baseball glove [437.76000000000005, 113.19999999999999, 65.28, 242.0]",
+        "iou": 0.9657282611630384,
+        "pred_label": "baseball glove",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000530146.jpg",
+        "pred_box": "sandwich [10.88, 76.16, 627.84, 553.6]",
+        "iou": 0.9874465422503076,
+        "pred_label": "sandwich",
+        "gt_label": "bowl"
+    },
+    {
+        "image_id": "000000082715.jpg",
+        "pred_box": "surfboard [174.08, 116.144, 131.84, 90.097]",
+        "iou": 0.9318766871584089,
+        "pred_label": "surfboard",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000530624.jpg",
+        "pred_box": "knife [12.8, 0.0, 583.6800000000001, 265.29]",
+        "iou": 0.5162291964243413,
+        "pred_label": "knife",
+        "gt_label": "bed"
+    },
+    {
+        "image_id": "000000532901.jpg",
+        "pred_box": "chair [82.2, 159.654, 441.0, 188.328]",
+        "iou": 0.9709642671202389,
+        "pred_label": "chair",
+        "gt_label": "couch"
+    },
+    {
+        "image_id": "000000066771.jpg",
+        "pred_box": "spoon [116.47999999999999, 332.15999999999997, 122.88, 65.28]",
+        "iou": 0.8765085139964836,
+        "pred_label": "spoon",
+        "gt_label": "cup"
+    },
+    {
+        "image_id": "000000016249.jpg",
+        "pred_box": "suitcase [42.0, 144.905, 148.0, 186.88]",
+        "iou": 0.7966074172965495,
+        "pred_label": "suitcase",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000498919.jpg",
+        "pred_box": "orange [46.656, 28.188, 141.696, 81.0]",
+        "iou": 0.8369074653032622,
+        "pred_label": "orange",
+        "gt_label": "apple"
+    },
+    {
+        "image_id": "000000339442.jpg",
+        "pred_box": "pizza [202.924, 35.84, 192.987, 92.16]",
+        "iou": 0.8400657881614229,
+        "pred_label": "pizza",
+        "gt_label": "apple"
+    },
+    {
+        "image_id": "000000155179.jpg",
+        "pred_box": "sandwich [10.88, 0.0, 625.28, 405.756]",
+        "iou": 0.9890309318280467,
+        "pred_label": "sandwich",
+        "gt_label": "cake"
+    },
+    {
+        "image_id": "000000401250.jpg",
+        "pred_box": "skis [111.35999999999999, 112.548, 168.96, 180.276]",
+        "iou": 0.9669161693042535,
+        "pred_label": "skis",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000081594.jpg",
+        "pred_box": "sandwich [168.256, 300.79999999999995, 140.054, 197.12]",
+        "iou": 0.5022283326770959,
+        "pred_label": "sandwich",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000404678.jpg",
+        "pred_box": "tv [362.23999999999995, 100.725, 115.19999999999999, 169.15]",
+        "iou": 0.9534363211590552,
+        "pred_label": "tv",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000404678.jpg",
+        "pred_box": "tv [148.48000000000002, 96.9, 151.04, 214.2]",
+        "iou": 0.9344509808824912,
+        "pred_label": "tv",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000404678.jpg",
+        "pred_box": "tv [256.0, 93.5, 66.56, 65.025]",
+        "iou": 0.8631549526157806,
+        "pred_label": "tv",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000404678.jpg",
+        "pred_box": "tv [357.12, 89.25, 102.4, 180.625]",
+        "iou": 0.7403361716028947,
+        "pred_label": "tv",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000010764.jpg",
+        "pred_box": "baseball bat [213.76000000000002, 75.048, 273.92, 326.904]",
+        "iou": 0.9320501296888214,
+        "pred_label": "baseball bat",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000537812.jpg",
+        "pred_box": "toilet [294.40000000000003, 256.8, 133.12, 176.64]",
+        "iou": 0.9505075307992784,
+        "pred_label": "toilet",
+        "gt_label": "chair"
+    },
+    {
+        "image_id": "000000210915.jpg",
+        "pred_box": "surfboard [133.12, 112.8, 276.48, 180.96]",
+        "iou": 0.9399117868253827,
+        "pred_label": "surfboard",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000008211.jpg",
+        "pred_box": "baseball glove [323.84000000000003, 203.796, 81.92, 133.569]",
+        "iou": 0.8190176191214151,
+        "pred_label": "baseball glove",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000008211.jpg",
+        "pred_box": "baseball glove [414.72, 208.845, 64.0, 134.028]",
+        "iou": 0.7806188089320972,
+        "pred_label": "baseball glove",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000515982.jpg",
+        "pred_box": "baseball bat [341.76, 0.852, 248.32, 400.44]",
+        "iou": 0.9537861296214535,
+        "pred_label": "baseball bat",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000199236.jpg",
+        "pred_box": "knife [218.88000000000002, 66.568, 90.88, 239.98399999999998]",
+        "iou": 0.9562013391657754,
+        "pred_label": "knife",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000191845.jpg",
+        "pred_box": "car [0.0, 0.0, 638.72, 359.917]",
+        "iou": 0.9993313608068163,
+        "pred_label": "car",
+        "gt_label": "person"
+    },
+    {
+        "image_id": "000000044068.jpg",
+        "pred_box": "bear [175.2, 154.88, 236.16, 353.28000000000003]",
+        "iou": 0.9308304091306312,
+        "pred_label": "bear",
+        "gt_label": "teddy bear"
+    },
+    {
+        "image_id": "000000117744.jpg",
+        "pred_box": "backpack [83.647, 142.08, 152.575, 207.36]",
+        "iou": 0.5154793814973181,
+        "pred_label": "backpack",
+        "gt_label": "person"
+    }
+]

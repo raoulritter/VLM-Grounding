@@ -3,40 +3,35 @@ from PIL import Image, ImageDraw
 import matplotlib.pyplot as plt
 import os
 
+# threshold = 0.7
 # Load the JSON data
-with open('../data/bbxes_objects/bboxes_objects.json', 'r') as file:
+with open('../data/bboxes_objects/synonyms/adjusted_bboxes_objects.json', 'r') as file:
     predicted_bboxes = json.load(file)
+
+# with open(f'../data/bboxes_objects/map_classes/bboxes_objects_{threshold}.json', 'r') as file:
+#     predicted_bboxes = json.load(file)
+
+# with open('../data/bboxes_objects/bboxes_original_removed.json', 'r') as file:
+#     predicted_bboxes = json.load(file)
 
 with open('../data/gt_bboxes/gt_bboxes.json', 'r') as file:
     ground_truth_bboxes = json.load(file)
 
-## Define the path to the images folder
+# Define the path to the images folder
 images_folder = '../data/images'
-output_folder = '../data/bbox_images'
+output_folder = '../data/bbox_images/synonyms'
+# output_folder = f'../data/bbox_images/map_classes/{threshold}'
+# output_folder = '../data/bbox_images/skip_classes'
 
-# Define subfolders for classifications
 hallucinations_folder = os.path.join(output_folder, 'hallucinations')
 correct_classifications_folder = os.path.join(output_folder, 'correct_classifications')
 misclassifications_folder = os.path.join(output_folder, 'misclassifications')
+wrong_objects_folder = os.path.join(output_folder, 'wrong_objects')
 
-# Ensure the output folders exist
 os.makedirs(hallucinations_folder, exist_ok=True)
 os.makedirs(correct_classifications_folder, exist_ok=True)
 os.makedirs(misclassifications_folder, exist_ok=True)
-
-# Function to adjust bounding boxes according to actual image dimensions
-def adjust_bboxes(bboxes, orig_size, target_size=(1000, 1000)):
-    orig_width, orig_height = orig_size
-    adjusted_bboxes = []
-    for bbox, label in bboxes:
-        x, y, w, h = bbox
-        # Scale the bounding box coordinates
-        x = x / target_size[0] * orig_width
-        y = y / target_size[1] * orig_height
-        w = w / target_size[0] * orig_width
-        h = h / target_size[1] * orig_height
-        adjusted_bboxes.append(([x, y, w, h], label))
-    return adjusted_bboxes
+os.makedirs(wrong_objects_folder, exist_ok=True)
 
 # Define a function to draw bounding boxes on an image
 def draw_bboxes(image, bboxes, color):
@@ -69,7 +64,7 @@ def calculate_iou(box1, box2):
 
 # Function to parse bounding box from string
 def parse_bounding_box(bbox_str):
-    bbox_str = bbox_str.split('[')[-1].split(']')[0]  # Get the part inside the square brackets
+    bbox_str = bbox_str.split('[')[-1].split(']')[0]
     bbox = list(map(float, bbox_str.split(',')))
     return bbox
 
@@ -77,6 +72,7 @@ def parse_bounding_box(bbox_str):
 hallucinations = []
 correctly_classified = []
 misclassified = []
+wrong_objects = []
 
 # Process each image in the images folder
 for image_filename in os.listdir(images_folder):
@@ -90,7 +86,7 @@ for image_filename in os.listdir(images_folder):
         predicted_boxes = [bbox for bbox in predicted_bboxes if bbox['image'] == image_filename]
         gt_boxes = [bbox for bbox in ground_truth_bboxes if bbox['image'] == image_filename]
 
-        # Extract and adjust bounding boxes from the data
+        # Extract bounding boxes from the data
         predicted_bboxes_list = []
         for item in predicted_boxes:
             for obj in item['bbx with object']:
@@ -107,8 +103,21 @@ for image_filename in os.listdir(images_folder):
                 bbox = [float(coord) for coord in bbox]
                 gt_bboxes_list.append((bbox, obj_name))
 
-        # Adjust predicted bounding boxes to actual image size
-        predicted_bboxes_list = adjust_bboxes(predicted_bboxes_list, orig_size)
+        # Check if there are no predicted bounding boxes
+        if not predicted_bboxes_list:
+            # Draw the ground truth bounding boxes (green)
+            draw_bboxes(image, gt_bboxes_list, 'green')
+            iou_text = ["no objects found by CogVLM"]
+
+            # Save the image with the message
+            output_image_path = os.path.join(wrong_objects_folder, f'{image_id}.jpg')
+            plt.figure(figsize=(10, 10))
+            plt.imshow(image)
+            plt.axis('off')
+            plt.title(f'{image_id}\n' + '\n'.join(iou_text))
+            plt.savefig(output_image_path, bbox_inches='tight')
+            plt.close()
+            continue
 
         # Draw the ground truth bounding boxes (green)
         draw_bboxes(image, gt_bboxes_list, 'green')
@@ -134,8 +143,12 @@ for image_filename in os.listdir(images_folder):
             
             if max_iou < 0.5:
                 # If IoU is less than 0.5, classify as a hallucination
-                hallucinations.append({"image_id": image_id, "pred_box": pred_box, "iou": max_iou})
-                output_image_path = os.path.join(hallucinations_folder, f'{image_id}.jpg')
+                if matched_gt_label == pred_label:
+                    hallucinations.append({"image_id": image_id, "pred_box": pred_box, "iou": max_iou})
+                    output_image_path = os.path.join(hallucinations_folder, f'{image_id}.jpg')
+                else:
+                    wrong_objects.append({"image_id": image_id, "pred_box": pred_box, "iou": max_iou})
+                    output_image_path = os.path.join(wrong_objects_folder, f'{image_id}.jpg')
             else:
                 # Check if the labels match
                 if matched_gt_label == pred_label:
@@ -152,4 +165,3 @@ for image_filename in os.listdir(images_folder):
         plt.title(f'{image_id}\n' + '\n'.join(iou_text))
         plt.savefig(output_image_path, bbox_inches='tight')
         plt.close()
-

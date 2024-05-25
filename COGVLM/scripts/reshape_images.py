@@ -2,7 +2,7 @@ import json
 from PIL import Image
 
 # Load the JSON data
-with open('../data/bbxes_objects/bboxes_objects.json', 'r') as file:
+with open('../data/bboxes_objects/synonyms/bboxes_objects.json', 'r') as file:
     predicted_bboxes = json.load(file)
 
 # Function to adjust bounding boxes according to actual image dimensions
@@ -47,7 +47,7 @@ for item in predicted_bboxes:
     })
 
 # Save the new predicted bboxes to a new JSON file
-with open('../data/bbxes_objects/adjusted_bbox_objects.json', 'w') as file:
+with open('../data/bboxes_objects/synonyms/adjusted_bboxes_objects.json', 'w') as file:
     json.dump(new_predicted_bboxes, file, indent=4)
 
 print("Adjusted bounding boxes have been saved to 'adjusted_bbox_objects.json'.")

@@ -16,7 +16,7 @@ model = AutoModelForCausalLM.from_pretrained(
 query = 'Can you provide a detailed description of the image and include the coordinates [[x0,y0,x1,y1]] for each mentioned object?'
 
 
-image_dir = 'VLM-Grounding/COGVLM/data/images'
+image_dir = '../data/images'
 image_files = [f for f in os.listdir(image_dir) if f.endswith(('.jpg', '.jpeg', '.png'))]
 
 captions = []
@@ -42,7 +42,7 @@ for image_file in tqdm(image_files[:500], desc="Processing Images"):
     captions.append({'image_id': image_file, 'caption': caption})
 
 
-with open('VLM-Grounding/COGVLM/data/captions/captions.json', 'w') as f:
+with open('../data/captions/captions.json', 'w') as f:
     for caption in captions:
         json.dump(caption, f)
         f.write('\n')

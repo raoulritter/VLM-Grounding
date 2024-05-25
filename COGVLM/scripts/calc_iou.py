@@ -3,6 +3,8 @@
 import json
 from typing import List, Dict
 
+threshold = 0.7
+
 # Function to calculate IoU
 def calculate_iou(box1, box2):
     x1, y1, w1, h1 = box1
@@ -35,8 +37,15 @@ def parse_bounding_box(bbox_str):
     return bbox
 
 # Load JSON files
-with open('../data/bbxes_objects/adjusted_bbox_objects.json', 'r') as f:
+with open('../data/bboxes_objects/synonyms/adjusted_bboxes_objects.json', 'r') as f:
     predicted_data = json.load(f)
+
+# with open('../data/bboxes_objects/adjusted_bboxes__original_objects.json', 'r') as f:
+#     predicted_data = json.load(f)
+
+# with open(f'../data/bboxes_objects/map_classes/bboxes_objects_{threshold}.json', 'r') as f:
+#     predicted_data = json.load(f)
+
 
 with open('../data/gt_bboxes/gt_bboxes.json', 'r') as f:
     ground_truth_data = json.load(f)
@@ -90,15 +99,30 @@ print(f"Number of correct classifications: {len(correctly_classified)}")
 print(f"Number of misclassifications: {len(misclassified)}")
 print(f"Number of wrong objects: {len(wrong_object)}")
 
+
 # Save the results to JSON files
-with open('../data/output/hallucinations.json', 'w') as f:
+with open(f'../data/output/synonyms/hallucinations.json', 'w') as f:
     json.dump(hallucinations, f, indent=4)
 
-with open('../data/output/correctly_classified.json', 'w') as f:
+with open(f'../data/output/synonyms/correctly_classified.json', 'w') as f:
     json.dump(correctly_classified, f, indent=4)
 
-with open('../data/output/misclassified.json', 'w') as f:
+with open(f'../data/output/synonyms/misclassified.json', 'w') as f:
     json.dump(misclassified, f, indent=4)
 
-with open('../data/output/wrong_object.json', 'w') as f:
+with open(f'../data/output/synonyms/wrong_object.json', 'w') as f:
     json.dump(wrong_object, f, indent=4)
+
+
+# # Save the results to JSON files
+# with open(f'../data/output/map_classes/{threshold}/hallucinations.json', 'w') as f:
+#     json.dump(hallucinations, f, indent=4)
+
+# with open(f'../data/output/map_classes/{threshold}/correctly_classified.json', 'w') as f:
+#     json.dump(correctly_classified, f, indent=4)
+
+# with open(f'../data/output/map_classes/{threshold}/misclassified.json', 'w') as f:
+#     json.dump(misclassified, f, indent=4)
+
+# with open(f'../data/output/map_classes/{threshold}/wrong_object.json', 'w') as f:
+#     json.dump(wrong_object, f, indent=4)

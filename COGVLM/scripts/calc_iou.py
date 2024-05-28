@@ -1,9 +1,5 @@
-# Modified script to handle maximum IoU values and classify correctly, misclassified, and hallucinations
-
 import json
 from typing import List, Dict
-
-threshold = 0.7
 
 # Function to calculate IoU
 def calculate_iou(box1, box2):
@@ -37,15 +33,14 @@ def parse_bounding_box(bbox_str):
     return bbox
 
 # Load JSON files
-with open('../data/bboxes_objects/synonyms/adjusted_bboxes_objects.json', 'r') as f:
+threshold = 0.7
+path_input = f'../data/bboxes_objects/map_classes/bboxes_objects_{threshold}.json'
+# path_input = '../data/bboxes_objects/synonyms/adjusted_bboxes_objects.json'
+# path_input = '../data/bboxes_objects/skip_classes/adjusted_bboxes_original_removed.json'
+
+
+with open(f'{path_input}', 'r') as f:
     predicted_data = json.load(f)
-
-# with open('../data/bboxes_objects/adjusted_bboxes__original_objects.json', 'r') as f:
-#     predicted_data = json.load(f)
-
-# with open(f'../data/bboxes_objects/map_classes/bboxes_objects_{threshold}.json', 'r') as f:
-#     predicted_data = json.load(f)
-
 
 with open('../data/gt_bboxes/gt_bboxes.json', 'r') as f:
     ground_truth_data = json.load(f)
@@ -93,36 +88,45 @@ for pred in predicted_data:
                 else:
                     misclassified.append({"image_id": image_id, "pred_box": pred_box, "iou": max_iou, "pred_label": pred_label, "gt_label": matched_gt_label})
 
-print(f"Total instances: {instances}")
-print(f"Number of hallucinations: {len(hallucinations)}")
-print(f"Number of correct classifications: {len(correctly_classified)}")
-print(f"Number of misclassifications: {len(misclassified)}")
-print(f"Number of wrong objects: {len(wrong_object)}")
+# Calculate average IoUs
+def calculate_average_iou(data):
+    if not data:
+        return 0
+    total_iou = sum(item['iou'] for item in data)
+    return total_iou / len(data)
 
+avg_iou_hallucinations = calculate_average_iou(hallucinations)
+avg_iou_correctly_classified = calculate_average_iou(correctly_classified)
+avg_iou_misclassified = calculate_average_iou(misclassified)
+avg_iou_wrong_objects = calculate_average_iou(wrong_object)
+
+total_iou = hallucinations + correctly_classified + misclassified
+avg_iou_total = calculate_average_iou(total_iou)
+
+print(f"Total instances: {instances}")
+print(f"Number of hallucinations: {len(hallucinations)}, Average IoU: {avg_iou_hallucinations}")
+print(f"Number of correct classifications: {len(correctly_classified)}, Average IoU: {avg_iou_correctly_classified}")
+print(f"Number of misclassifications: {len(misclassified)}, Average IoU: {avg_iou_misclassified}")
+print(f"Number of wrong objects: {len(wrong_object)}, Average IoU: {avg_iou_wrong_objects}")
+print(f"Final Average IoU (excluding wrong objects): {avg_iou_total} \n")
+print(f"Percentage of Hallucinations: {len(hallucinations)/(instances-len(wrong_object))}")
+print(f"Percentage of misclassifications: {len(misclassified)/(instances-len(wrong_object))}")
+print(f"Percentage of correct classifications: {len(correctly_classified)/(instances-len(wrong_object))}")
+
+
+# base_path_output = '../data/output/synonyms'
+# base_path_output = '../data/output/skip_classes'
+base_path_output = f'../data/output/map_classes/{threshold}'
 
 # Save the results to JSON files
-with open(f'../data/output/synonyms/hallucinations.json', 'w') as f:
+with open(f'{base_path_output}/hallucinations.json', 'w') as f:
     json.dump(hallucinations, f, indent=4)
 
-with open(f'../data/output/synonyms/correctly_classified.json', 'w') as f:
+with open(f'{base_path_output}/correctly_classified.json', 'w') as f:
     json.dump(correctly_classified, f, indent=4)
 
-with open(f'../data/output/synonyms/misclassified.json', 'w') as f:
+with open(f'{base_path_output}/misclassified.json', 'w') as f:
     json.dump(misclassified, f, indent=4)
 
-with open(f'../data/output/synonyms/wrong_object.json', 'w') as f:
+with open(f'{base_path_output}/wrong_object.json', 'w') as f:
     json.dump(wrong_object, f, indent=4)
-
-
-# # Save the results to JSON files
-# with open(f'../data/output/map_classes/{threshold}/hallucinations.json', 'w') as f:
-#     json.dump(hallucinations, f, indent=4)
-
-# with open(f'../data/output/map_classes/{threshold}/correctly_classified.json', 'w') as f:
-#     json.dump(correctly_classified, f, indent=4)
-
-# with open(f'../data/output/map_classes/{threshold}/misclassified.json', 'w') as f:
-#     json.dump(misclassified, f, indent=4)
-
-# with open(f'../data/output/map_classes/{threshold}/wrong_object.json', 'w') as f:
-#     json.dump(wrong_object, f, indent=4)

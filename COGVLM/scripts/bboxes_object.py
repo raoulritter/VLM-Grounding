@@ -5,7 +5,7 @@ import re
 synonym_to_category = {
     'person': ['girls', 'men', 'beard', 'bun', 'bride', 'man', 'women', 'head', 'person', 'baby', 'crowd', 'boy', 'toddler', 'People', 'player', 'skateboarder', 'skier', 'passengers', 'surfer', 'groom', 'child', 'friends', 'Sailors', 'team', 'family', 'players', 'teammates', 'girl', 'bikinis', 'shoulder', 'children', 'faces', 'boys', 'expression', 'mouth', 'hair', 'coach', 'boys', 'people', 'groom', 'woman', 'eye', 'face', 'gentleman', 'player', 'walker', 'drinker', 'shopper', 'hunter', 'villager', 'worker', 'male', 'female', 'traveler'],
     'bicycle': ['bike'],
-    'car': ['van', 'truck'],
+    'car': ['van'],
     'motorcycle': ['moped', 'motorcycle'],
     'airplane': ['airplane', 'jet'],
     'bus': ['bus'],

@@ -1,60 +1,86 @@
-adjusted_bbox_original_removed (skip_classes):
+**Skip_classes:**
+
 Total instances: 544
-Number of hallucinations: 37
-Number of correct classifications: 483
-Number of misclassifications: 11
-Number of wrong objects: 13
-Correct instances: 531
+Number of hallucinations: 37, Average IoU: 0.29115235180023435
+Number of correct classifications: 483, Average IoU: 0.8746301403222698
+Number of misclassifications: 11, Average IoU: 0.8914253915226737
+Number of wrong objects: 13, Average IoU: 0.1825759065891924
+Final Average IoU (excluding wrong objects): 0.8343214201488033 
 
-Hallucination percentage: 6.97%
+Percentage of Hallucinations: 0.0696798493408663
+Percentage of misclassifications: 0.02071563088512241
+Percentage of correct classifications: 0.9096045197740112
 
-synonyms:
+-------------------------------------------------------------
+
+**Synonyms:** 
+
 Total instances: 919
-Number of hallucinations: 67
-Number of correct classifications: 802
-Number of misclassifications: 14
-Number of wrong objects: 36
-Correct instances: 883
+Number of hallucinations: 67, Average IoU: 0.2890498583665195
+Number of correct classifications: 804, Average IoU: 0.8857400302333465
+Number of misclassifications: 12, Average IoU: 0.8484417667051244
+Number of wrong objects: 36, Average IoU: 0.18005262665817245
+Final Average IoU (excluding wrong objects): 0.8399576738602816
 
-Hallucination percentage: 7.6%
+Percentage of Hallucinations: 0.07587768969422423
+Percentage of misclassifications: 0.013590033975084938
+Percentage of correct classifications: 0.9105322763306908
 
-map_classes 0.4:
+-------------------------------------------------------------
+
+**map_classes 0.4:**
+
 Total instances: 1480
-Number of hallucinations: 97
-Number of correct classifications: 758
-Number of misclassifications: 184
-Number of wrong objects: 422
-Correct instances: 1480 - 422 = 1058
+Number of hallucinations: 97, Average IoU: 0.23377835975901234
+Number of correct classifications: 758, Average IoU: 0.8794643795760734
+Number of misclassifications: 184, Average IoU: 0.8170707323627883
+Number of wrong objects: 422, Average IoU: 0.16884963368702646
+Final Average IoU (excluding wrong objects): 0.8081342785082195 
 
-Hallucination percentage: 9.2%
+Percentage of Hallucinations: 0.09168241965973535
+Percentage of misclassifications: 0.17391304347826086
+Percentage of correct classifications: 0.7164461247637051
 
+-------------------------------------------------------------
 
-map_classes 0.5:
+**map_classes 0.5:**
+
 Total instances: 1067
-Number of hallucinations: 82
-Number of correct classifications: 661
-Number of misclassifications: 108
-Number of wrong objects: 205
-Correct instances: 862
+Number of hallucinations: 82, Average IoU: 0.24189065850337924
+Number of correct classifications: 661, Average IoU: 0.8752435749766487
+Number of misclassifications: 108, Average IoU: 0.8450452997825794
+Number of wrong objects: 205, Average IoU: 0.17591224334322703
+Final Average IoU (excluding wrong objects): 0.8103829958088842 
 
-Hallucination percentage: 9.5%
+Percentage of Hallucinations: 0.0951276102088167
+Percentage of misclassifications: 0.12529002320185614
+Percentage of correct classifications: 0.7668213457076566
 
-map_classes 0.6:
+-------------------------------------------------------------
+
+**map_classes 0.6:**
+
 Total instances: 848
-Number of hallucinations: 61
-Number of correct classifications: 649
-Number of misclassifications: 64
-Number of wrong objects: 67
-Correct instances: 781
+Number of hallucinations: 61, Average IoU: 0.2788439659537393
+Number of correct classifications: 649, Average IoU: 0.8755611938459593
+Number of misclassifications: 64, Average IoU: 0.8744870736301154
+Number of wrong objects: 67, Average IoU: 0.15994817182254953
+Final Average IoU (excluding wrong objects): 0.8284442757642551 
 
-Hallucination percentage: 7.8%
+Percentage of Hallucinations: 0.07810499359795134
+Percentage of misclassifications: 0.08194622279129321
+Percentage of correct classifications: 0.8309859154929577
 
-map_classes 0.7:
+-------------------------------------------------------------
+**map_classes 0.7:**
+
 Total instances: 600
-Number of hallucinations: 45
-Number of correct classifications: 468
-Number of misclassifications: 43
-Number of wrong objects: 39
-Correct instances: 561
+Number of hallucinations: 45, Average IoU: 0.2788826578596913
+Number of correct classifications: 468, Average IoU: 0.8790235969025284
+Number of misclassifications: 43, Average IoU: 0.8753825462412551
+Number of wrong objects: 39, Average IoU: 0.15561790818690885
+Final Average IoU (excluding wrong objects): 0.8301694468389271 
 
-Hallucination percentage: 8%
+Percentage of Hallucinations: 0.08021390374331551
+Percentage of misclassifications: 0.0766488413547237
+Percentage of correct classifications: 0.8342245989304813
